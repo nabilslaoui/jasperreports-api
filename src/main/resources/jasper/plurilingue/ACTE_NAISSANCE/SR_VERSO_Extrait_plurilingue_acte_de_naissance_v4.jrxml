@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SR_VERSO_Extrait_Plurilingue" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9d79b319-346e-4d61-9db6-d66272e8ecbd">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="811" splitType="Stretch">
+			<line>
+				<reportElement x="70" y="220" width="480" height="1" forecolor="#FF3300" uuid="1028601b-afab-4228-9f45-22fa02cea9c9"/>
+			</line>
+			<line>
+				<reportElement x="70" y="250" width="480" height="1" forecolor="#FF3300" uuid="9ae9d789-1bc9-43a0-b2e6-9bfab8bf0640"/>
+			</line>
+			<line>
+				<reportElement x="70" y="280" width="480" height="1" forecolor="#FF3300" uuid="53e51d1e-0c5a-4610-b02b-e195a8054d6c"/>
+			</line>
+			<line>
+				<reportElement x="70" y="310" width="480" height="1" forecolor="#FF3300" uuid="93f20836-1d51-431b-b3d3-b6fa18ec7c79"/>
+			</line>
+			<line>
+				<reportElement x="70" y="340" width="480" height="1" forecolor="#FF3300" uuid="f8daa9d6-3f82-418c-ad6f-c145d08490da"/>
+			</line>
+			<line>
+				<reportElement x="70" y="370" width="480" height="1" forecolor="#FF3300" uuid="4e8c2454-1130-44e8-8588-88fd5e960610"/>
+			</line>
+			<line>
+				<reportElement x="70" y="400" width="480" height="1" forecolor="#FF3300" uuid="b87a1ffa-03b9-479c-a359-a0a09a8ea3ee"/>
+			</line>
+			<line>
+				<reportElement x="70" y="430" width="480" height="1" forecolor="#FF3300" uuid="6585dd4a-dd7c-479b-b917-dc7cf04c25f8"/>
+			</line>
+			<line>
+				<reportElement x="70" y="460" width="480" height="1" forecolor="#FF3300" uuid="65660a82-facb-4887-b55b-7d9ad198d075"/>
+			</line>
+			<line>
+				<reportElement x="70" y="490" width="480" height="1" forecolor="#FF3300" uuid="b3a98591-19a5-4de6-afda-538441fae074"/>
+			</line>
+			<line>
+				<reportElement x="70" y="520" width="480" height="1" forecolor="#FF3300" uuid="308bfa4a-2ad4-49c4-9cb7-b075cf983516"/>
+			</line>
+			<line>
+				<reportElement x="70" y="550" width="480" height="1" forecolor="#FF3300" uuid="acc74c8a-32c9-445c-a76c-b12d8b9e1ffb"/>
+			</line>
+			<line>
+				<reportElement x="70" y="220" width="1" height="330" forecolor="#FF3300" uuid="c9cfe1b4-6948-466b-88f0-85ebbb9ddb6f"/>
+			</line>
+			<line>
+				<reportElement x="95" y="220" width="1" height="330" forecolor="#FF3300" uuid="7955db55-29a0-48d4-be81-2ddf78a53ece"/>
+			</line>
+			<line>
+				<reportElement x="550" y="220" width="1" height="330" forecolor="#FF3300" uuid="c9dbb2a0-ae8c-4ca0-80ff-0e2223a520ea"/>
+			</line>
+			<staticText>
+				<reportElement x="71" y="624" width="484" height="10" forecolor="#FF3300" uuid="26a33a4b-a0c8-4394-a0a3-a8c1cfab818c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="LiberationSans" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[* Selon les articles 3, 4, 5 et 7 de cette Convention :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="634" width="490" height="131" forecolor="#FF3300" uuid="ba3bdd3d-7025-4ffd-b6d1-0d6ed123fb9b"/>
+				<textElement>
+					<font fontName="LiberationSans" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[- Les inscriptions sont écrites en caractères latins d’imprimerie : elles peuvent en outre être écrites dans les caractères de la langue qui a été utilisée pour la rédaction de l’acte auquel elles se réfèrent.
+- Les dates sont inscrites en chiffres arabes indiquant successivement le jour, le mois et l’année. Le jour et le mois sont indiqués par deux chiffres, l’année par quatre chiffres. Les neuf premiers jours du mois et les neuf premiers mois de l’année sont désignés par des chiffres allant de 01 à 09.
+- Le nom de tout lieu est suivi du nom de l’Etat où ce lieu est situé chaque fois que cet Etat n’est pas celui où l’extrait est délivré.
+- Les symboles Mar, Sc, Div, A, D, Dm et Df sont suivis de la date et du lieu de l’événement. Le symbole Mar est en outre suivi des nom et prénoms du conjoint.
+- Si le libellé de l’acte ne permet pas de remplir une case ou une partie de case, elles sont rendues inutilisables par des traits.
+- L’adjonction d’autres cases ou symboles est soumise à l’accord préalable de la Commission Internationale de l’Etat Civil.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="520" width="25" height="30" forecolor="#FF3300" uuid="579f1df7-8714-417d-be67-d01f57c5d1ae">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[11]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="220" width="25" height="30" forecolor="#FF3300" uuid="5a2c9b9a-bef4-468a-90a1-ece391c40421">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="250" width="25" height="30" forecolor="#FF3300" uuid="a651b160-d960-41dd-a3fc-fd7988c53a59">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="280" width="25" height="30" forecolor="#FF3300" uuid="0d980c89-a2af-42a9-8b7e-a52e28aaa7e4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="310" width="25" height="30" forecolor="#FF3300" uuid="899127fe-38aa-4f54-8dd0-eb60e5545b0e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="340" width="25" height="30" forecolor="#FF3300" uuid="80f6b90a-d4b2-43af-ab2f-7fec9af054ed">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="370" width="25" height="30" forecolor="#FF3300" uuid="fe384196-9f68-42d4-a0ac-5b03a090fbc5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="400" width="25" height="30" forecolor="#FF3300" uuid="ab4644e2-6a72-4722-8d48-656236cd10e4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="430" width="25" height="30" forecolor="#FF3300" uuid="791546d8-f33c-4c43-b67e-842be4ba73a5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="460" width="25" height="30" forecolor="#FF3300" uuid="9b4142c5-940f-418c-9bd5-66e0a3d16632">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="490" width="25" height="30" forecolor="#FF3300" uuid="44c3b4d9-e067-429a-8cc6-caa78758eb3a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="220" width="430" height="31" forecolor="#FF3300" uuid="95c5fdb2-9efd-4122-add4-23f6732d6969"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="LiberationSans" size="8"/>
+				</textElement>
+				<text><![CDATA[Staat / Country / Estado / Κράτος / Stato / Staat / Estado / Devlet / Drzava]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="250" width="430" height="31" forecolor="#FF3300" uuid="b90a47d6-2ec3-4286-8e67-60396769e27c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="LiberationSans" size="8"/>
+				</textElement>
+				<text><![CDATA[Standesamtsbehörde / Civil Registry Office of / Registro civil de / Ληξιαρχική ’Αρχή τού (ή τής ή τών) / Servizio dello stato civile / Dienst van de burgerlijke stand van / Serviços do registo civil de / Nüfus Idaresi / Matična sluzba]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="280" width="430" height="31" forecolor="#FF3300" uuid="a965e6f5-bce9-4cc3-876c-d9282a553878"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="LiberationSans" size="8"/>
+				</textElement>
+				<text><![CDATA[Auszug aus dem Geburtseintrag Nr / Extract from birth registration no / Certificacion del acta de nacimiento N° / ’Απόσπασµα ληξιαρχικής πράξεως γεννήσεως άριθ / Estratto dell’atto di nascita n. / Uittreksel uit de geboorteakte nr. / Certidão do assento de nascimento n° / Doğum sicil örneği No. / Izvod iz matične knjige rodjenih br.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="310" width="430" height="30" forecolor="#FF3300" uuid="f3637f27-d92b-4687-a6fb-6502d6c70801"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="LiberationSans" size="8"/>
+				</textElement>
+				<text><![CDATA[Tag und Ort der Geburt / Date and place of birth / Fecha y lugar de nacimiento / Χρονολογία καί τόπος γεννήσεως / Data e luogo di nascita / Geboortedatum en plaats / Data e lugar do nascimento / Doğum yeri ve tarihi / Datum i mesto rodjenja]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="340" width="430" height="30" forecolor="#FF3300" uuid="6ef77857-e786-491f-b05c-8acffdf7df71"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="LiberationSans" size="8"/>
+				</textElement>
+				<text><![CDATA[Name / Name / Apellidos / ’Επώνυµον / Cognome / Naam / Apelidos / Soyadı / Prezime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="370" width="430" height="31" forecolor="#FF3300" uuid="0657b349-94ac-4c10-b335-ca8f46a5c168"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="LiberationSans" size="8"/>
+				</textElement>
+				<text><![CDATA[Vornamen / Forenames / Nombre propio / ’Ονόµατα / Prenomi / Voornamen / Nome próprio / Adı / Ime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="400" width="430" height="30" forecolor="#FF3300" uuid="a2a42151-e6fa-4cef-b986-0962160c444e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="LiberationSans" size="8"/>
+				</textElement>
+				<text><![CDATA[Geschlecht / Sex / Sexo / Φϋλον / Sesso / Geslacht / Sexo / Cinsiyeti / Pol]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="431" width="430" height="29" forecolor="#FF3300" uuid="87077079-e33c-4ea5-88b2-a30f5aa2894f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="LiberationSans" size="8"/>
+				</textElement>
+				<text><![CDATA[Vater / Father / Padre / Πατήρ / Padre / Vader / Pai / Baba / Otac]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="461" width="430" height="29" forecolor="#FF3300" uuid="c505088d-16c1-443d-b3ca-cbef592429e6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="LiberationSans" size="8"/>
+				</textElement>
+				<text><![CDATA[Mutter / Mother / Madre / Μήτηρ / Madre / Moeder / Mãe / Ana / Majka]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="491" width="430" height="29" forecolor="#FF3300" uuid="a28741e9-34db-49d3-b4db-23f8c9b695ca"/>
+				<textElement>
+					<font fontName="LiberationSans" size="8"/>
+				</textElement>
+				<text><![CDATA[Andere Angaben aus dem Eintrag / Other particulars of the registration / Otros datos del acta / ’Ετεραι έγγραφαί τής πράξεως / Altre enunciazioni dell’atto / Andere vermeldingen van de akte / Outros elementos do assento / Işleme ait diğer bilgiler / Drugi podaci iz izvoda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="520" width="430" height="31" forecolor="#FF3300" uuid="4083e933-14aa-4c20-b02a-b420eaf2a366"/>
+				<textElement>
+					<font fontName="LiberationSans" size="8"/>
+				</textElement>
+				<text><![CDATA[Tag der Austellung, Unterschrift, Siegel / Date of issue, signature, seal / Fecha de expedición, firma, sello / Χρονολογία έχδόσεως, ύπογραφή, σφραγίς / Data di rilascio, firma, bollo / Datum van afgifte, handtekening, zegel / Data de emissão, assinatura, selo / Veriliş tarihi, imza, mühür / Datum izdavanja, potpis, pečat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="70" width="451" height="110" forecolor="#FF3300" uuid="0570dd29-6e6a-4c1f-aa0b-216070b05ec3"/>
+				<textElement textAlignment="Center">
+					<font fontName="LiberationSans" size="8"/>
+				</textElement>
+				<text><![CDATA[EXTRAIT DÉLIVRÉ EN APPLICATION DE LA CONVENTION SIGNÉE À VIENNE LE 8 SEPTEMBRE 1976 *
+AUSZUG AUSGESTELLT GEMÄß DEM ÜBEREINKOMMEN VON WIEN VOM 8. SEPTEMBER 1976
+EXTRACT ISSUED IN PURSUANCE OF THE CONVENTION SIGNED AT VIENNA ON SEPTEMBER 8. 1976
+CERTIFICACION EXPEDIDA EN APLICACION DEL CONVENIO FIRMADO EN VIENA EL 8 DE SEPTIEMBRE DE 1976
+ΑΠΟΣΠΑΣΜΑ ΧΟΡΗΓΟΥΜΕΝΟΝ ΚΑΤ ΕΦΑΡΜΟΓΗΝ ΤΗΣ ΣΥΜΒΑΣΕΩΣ ΤΗΣ ΒΙΕΝΝΗΣ ΤΗΣ 8 ΣEΠΤΕΜΒΡΙΟΥ 1976
+ESTRATTO RILASCIATO IN APPLICAZIONE DELLA CONVENZIONE FIRMATA A VIENNA IL 8 SETTEMBRE 1976
+UITTREKSEL AFGEGEVEN INGEVOLGE DE OVEREENKOMST ONDERTEKEND TE WENEN OP 8 SEPTEMBER 1976
+CERTIDÀO EMITIDA AO ABRIGO DA CONVENCÁO ASSINADA EM VIENA AOS 8 DE SETEMBRO DE 1976
+VIYANADA 8 EYLÜL 1976 TARIHINDE IMZALANAN SÔZLEŞME UYARINCA VERILEN ÖRNEK
+IZVOD IZDAT NA OSNOVU PRIMENE KONVENCIJE POTPISANE U BEČU 8 SEPTEMBRA 1976]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

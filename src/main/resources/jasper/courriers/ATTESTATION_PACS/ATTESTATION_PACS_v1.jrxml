@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Attestation_PACS" pageWidth="595" pageHeight="842" columnWidth="499" leftMargin="48" rightMargin="48" topMargin="48" bottomMargin="48" uuid="0232025a-165e-454d-a553-4053102e910a">
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<parameter name="headerSubReport" class="net.sf.jasperreports.engine.JasperReport">
+		<parameterDescription><![CDATA[header du rapport]]></parameterDescription>
+	</parameter>
+	<parameter name="footerSubReport" class="net.sf.jasperreports.engine.JasperReport">
+		<parameterDescription><![CDATA[footer du rapport]]></parameterDescription>
+	</parameter>
+	<parameter name="courrierSignatureSubReport" class="net.sf.jasperreports.engine.JasperReport">
+		<parameterDescription><![CDATA[signature du rapport]]></parameterDescription>
+	</parameter>
+	<queryString language="json">
+		<![CDATA[]]>
+	</queryString>
+	<field name="numero_fiche_pac" class="java.lang.String"/>
+	<field name="pays_naissance_partenaire_1" class="java.lang.String"/>
+	<field name="sexe_partenaire_1" class="java.lang.String"/>
+	<field name="decret1" class="java.lang.String"/>
+	<field name="ville_naissance_partenaire_1" class="java.lang.String"/>
+	<field name="annee_naissance_partenaire_1" class="java.lang.String"/>
+	<field name="mois_naissance_partenaire_1" class="java.lang.String"/>
+	<field name="jour_naissance_partenaire_1" class="java.lang.String"/>
+	<field name="nom_partenaire_1" class="java.lang.String"/>
+	<field name="prenoms_partenaire_1" class="java.lang.String"/>
+	<field name="decret2" class="java.lang.String"/>
+	<field name="decret3" class="java.lang.String"/>
+	<field name="decret4" class="java.lang.String"/>
+	<field name="decret5" class="java.lang.String"/>
+	<field name="decret6" class="java.lang.String"/>
+	<field name="paragraphe_enregistrement" class="java.lang.String"/>
+	<field name="paragraphe_modification" class="java.lang.String"/>
+	<field name="paragraphe_dissolution" class="java.lang.String"/>
+	<field name="paragraphe_annulation" class="java.lang.String"/>
+	<field name="decret_fin" class="java.lang.String"/>
+	<field name="pays_naissance_partenaire_2" class="java.lang.String"/>
+	<field name="sexe_partenaire_2" class="java.lang.String"/>
+	<field name="ville_naissance_partenaire_2" class="java.lang.String"/>
+	<field name="annee_naissance_partenaire_2" class="java.lang.String"/>
+	<field name="mois_naissance_partenaire_2" class="java.lang.String"/>
+	<field name="jour_naissance_partenaire_2" class="java.lang.String"/>
+	<field name="nom_partenaire_2" class="java.lang.String"/>
+	<field name="prenoms_partenaire_2" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="280">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport>
+				<reportElement stretchType="ContainerHeight" x="0" y="0" width="499" height="280" uuid="5f203b6a-50be-4f4b-88ab-87a226eb247a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{headerSubReport}]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="233" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="1" width="499" height="42" uuid="4763640e-981d-4e95-b971-9907edd9b559">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE("COMMUNICATION DES INFORMATIONS RELATIVES A\n UN PACTE CIVIL DE SOLIDARITÉ N°",$F{numero_fiche_pac})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="29" width="499" height="10" isRemoveLineWhenBlank="true" uuid="b651736c-984e-4fea-83d7-a4ce4fe7327b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[!$F{decret1}.equals( null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{decret1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="39" width="499" height="10" isRemoveLineWhenBlank="true" uuid="7c9186b6-b07b-4c02-9420-513b808a7035">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[!$F{decret2}.equals( null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{decret2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="49" width="499" height="10" isRemoveLineWhenBlank="true" uuid="6d756814-8ce1-4928-9050-73c07acd31fc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[!$F{decret3}.equals( null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{decret3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="59" width="499" height="10" isRemoveLineWhenBlank="true" uuid="617084ea-5bea-4282-b4b7-bc922ae0687c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[!$F{decret4}.equals( null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{decret4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="69" width="499" height="10" isRemoveLineWhenBlank="true" uuid="612d1cb1-a138-4f77-9f09-9197401e2f98">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[!$F{decret5}.equals( null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{decret5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="79" width="499" height="10" isRemoveLineWhenBlank="true" uuid="2a7a9d25-db2b-4ac0-a703-03752087b647">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[!$F{decret6}.equals( null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{decret6}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="89" width="499" height="14" uuid="536897cf-643f-4e2c-adbb-4913a7d43600">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<text><![CDATA[Je vous informe qu’une déclaration conjointe de pacte civil de solidarité a été souscrite par :]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" stretchType="ContainerHeight" x="0" y="130" width="499" height="14" uuid="38ccd14b-913f-4b14-bb95-efb6b027c95c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE("Lieu de naissance : ",$F{ville_naissance_partenaire_1}," (",$F{pays_naissance_partenaire_1},")")]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" stretchType="ContainerHeight" x="0" y="102" width="500" height="14" uuid="a7569200-7040-4541-91cb-75fe4ec305d9">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE("Prénom(s) et NOM du premier partenaire : ",$F{prenoms_partenaire_1}," ",$F{nom_partenaire_1})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="144" width="499" height="14" uuid="bf8ce2e5-bf06-43cb-b093-c61cd1e64aa2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE("Sexe : ",$F{sexe_partenaire_1})]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="0" y="116" width="499" height="14" uuid="0e471b8c-d829-44a6-9c44-b1857006f0d1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE("Date de naissance : ",$F{jour_naissance_partenaire_1}," ",$F{mois_naissance_partenaire_1}," ",$F{annee_naissance_partenaire_1})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="158" width="499" height="14" uuid="082bdd8e-fafd-4668-bdd6-11e24dc82706">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<text><![CDATA[Et : ]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" stretchType="ContainerHeight" x="0" y="172" width="500" height="14" uuid="99743c8d-61c4-4f68-81b4-fd6f55cfc455">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement markup="none">
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE("Prénom(s) et NOM du premier partenaire : ",$F{prenoms_partenaire_2}," ",$F{nom_partenaire_2})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="214" width="499" height="14" uuid="caea1d01-23a9-4012-b367-e163bcd107a9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE("Sexe : ",$F{sexe_partenaire_2})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="186" width="499" height="14" uuid="c92c6e73-75b2-4dd3-bc59-9816a19683c1">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE("Date de naissance : ",$F{jour_naissance_partenaire_2}," ",$F{mois_naissance_partenaire_2}," ",$F{annee_naissance_partenaire_2})]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" stretchType="ContainerHeight" x="0" y="200" width="499" height="14" uuid="6f9f3dcc-c8bc-4c5c-bffc-1b041fc791e9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="none">
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE("Lieu de naissance : ",$F{ville_naissance_partenaire_2}," (",$F{pays_naissance_partenaire_2},")")]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="127" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="ElementGroupHeight" x="0" y="0" width="499" height="15" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="3c6790f5-10a2-4058-8409-28dc8248583c">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<printWhenExpression><![CDATA[$F{paragraphe_enregistrement} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paragraphe_enregistrement}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" evaluationTime="Report">
+				<reportElement positionType="Float" stretchType="ElementGroupHeight" x="0" y="62" width="499" height="30" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="d6d971d2-94c7-498a-9a06-84300361af34">
+					<printWhenExpression><![CDATA[$F{paragraphe_dissolution} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paragraphe_dissolution}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" evaluationTime="Report">
+				<reportElement positionType="Float" stretchType="ElementGroupHeight" x="0" y="93" width="499" height="30" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="ecbc7ea2-9718-48d5-bd6f-35b73cd753d5">
+					<printWhenExpression><![CDATA[$F{paragraphe_annulation} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paragraphe_annulation}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" stretchType="ElementGroupHeight" x="0" y="31" width="499" height="30" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="7ad84736-7a53-44d8-8581-6cbe261e922f">
+					<printWhenExpression><![CDATA[$F{paragraphe_modification} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paragraphe_modification}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="153">
+			<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+			<subreport isUsingCache="false" runToBottom="false" overflowType="Stretch">
+				<reportElement positionType="Float" x="0" y="21" width="498" height="131" isRemoveLineWhenBlank="true" uuid="78fd5d2d-ea2e-4d72-b83d-b4e1bb6020ee">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{courrierSignatureSubReport}]]></subreportExpression>
+			</subreport>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="4" width="500" height="15" uuid="55faa733-1bb0-466e-b219-a63c9e7e44f0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE("Cette communication est faite conformément à l’", $F{decret_fin}, " relatif à la déclaration, la modification, la dissolution et à la publicité du pacte civil de solidarité. ")]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="41" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="497" height="41" uuid="de999025-fb86-4a09-a556-9add07a1a340">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{footerSubReport}]]></subreportExpression>
+			</subreport>
+			<textField evaluationTime="Report">
+				<reportElement x="265" y="5" width="26" height="30" uuid="0b1a2a8a-1e11-4d40-ace9-23c16511a3c1"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="252" y="5" width="13" height="30" uuid="0f748d6c-ad54-4ff2-b765-01974602d069"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="236" y="5" width="26" height="30" uuid="76b84260-0644-4a4c-b679-bd2d118dadaf"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SR_Courrier_pied_de_page" pageWidth="515" pageHeight="80" columnWidth="515" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4e5da0d5-fc2a-4ec9-a882-bb67f150c42e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="certificat_situation"/>
+	<property name="com.jaspersoft.studio.unit." value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="mm"/>
+	<queryString language="JSON">
+		<![CDATA[]]>
+	</queryString>
+	<field name="adresse_internet" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="adresse_internet"/>
+		<fieldDescription><![CDATA[adresse_internet]]></fieldDescription>
+	</field>
+	<field name="adr_service_delivreur_ligne4" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="adr_service_delivreur.ligne4"/>
+		<fieldDescription><![CDATA[adr_service_delivreur_ligne4]]></fieldDescription>
+	</field>
+	<field name="adr_service_delivreur_ligne6" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="adr_service_delivreur.ligne6"/>
+		<fieldDescription><![CDATA[adr_service_delivreur_ligne6]]></fieldDescription>
+	</field>
+	<field name="tel_service_delivreur" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="tel_service_delivreur"/>
+		<fieldDescription><![CDATA[tel_service_delivreur]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="1" width="510" height="10" uuid="5c5fee0c-1788-4970-9ad9-8688d385f49c">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE("Tél : ", $F{tel_service_delivreur})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="11" width="510" height="10" uuid="56f79fae-94cd-419a-b410-742c54c020ca">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE ("Adresse internet : ", $F{adresse_internet})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="21" width="510" height="10" uuid="75300359-5e9c-431c-96a2-c5f580c49b5c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{adr_service_delivreur_ligne4}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="31" width="510" height="10" uuid="ea436631-7e8b-48f4-90df-3368d8833a5a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{adr_service_delivreur_ligne6}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

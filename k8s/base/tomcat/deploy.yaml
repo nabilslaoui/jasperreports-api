@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jasperreports-api
+spec:
+  selector:
+    matchLabels:
+      module: jasperreports-api
+      composant: tomcat
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    spec:
+      containers:
+        - image: TODO/jasperreports-api:master
+          name: jasperreports-api
+          imagePullPolicy: Always
+          env:
+            - name: SPRING_APPLICATION_JSON
+              valueFrom:
+                configMapKeyRef:
+                  key: SPRING_APPLICATION_JSON
+                  name: jasperreports-api
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: pull-docker
+      restartPolicy: Always

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SR_Courrier_signature" pageWidth="501" pageHeight="130" columnWidth="501" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="77569885-c4cd-4c96-8775-a451308626d2">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="certificat_situation"/>
+	<property name="com.jaspersoft.studio.unit." value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="mm"/>
+	<queryString language="JSON">
+		<![CDATA[]]>
+	</queryString>
+	<field name="prenom_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="prenom_agent"/>
+		<fieldDescription><![CDATA[prenom_agent]]></fieldDescription>
+	</field>
+	<field name="nom_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="nom_agent"/>
+		<fieldDescription><![CDATA[nom_agent]]></fieldDescription>
+	</field>
+	<field name="image_signature" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="image_signature"/>
+		<fieldDescription><![CDATA[image_signature]]></fieldDescription>
+	</field>
+	<field name="cachet_signature" class="java.lang.String"/>
+	<field name="sceau_ministere" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="84" splitType="Stretch">
+			<image>
+				<reportElement x="337" y="14" width="140" height="70" forecolor="#FF3300" uuid="4bb2c7fa-ad30-4cb1-8048-86e48a09a98f"/>
+				<imageExpression><![CDATA[javax.imageio.ImageIO.read(new java.io.ByteArrayInputStream(Base64.getDecoder().decode($F{image_signature})))]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement positionType="Float" x="36" y="34" width="224" height="21" uuid="10095ab8-7212-4280-843a-fd5b96331f8a">
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Marianne" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE($F{prenom_agent} , " " , $F{nom_agent})]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="36" y="14" width="224" height="20" uuid="3116823c-e30e-45cf-a4d5-ae7768e32f3a">
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+				</reportElement>
+				<textElement markup="none">
+					<font fontName="Marianne" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cachet_signature}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="263" y="14" width="70" height="70" forecolor="#FF3300" uuid="ad5cb1a4-d951-4d59-8c77-2c74925df293"/>
+				<imageExpression><![CDATA[javax.imageio.ImageIO.read(new java.io.ByteArrayInputStream(Base64.getDecoder().decode($F{sceau_ministere})))]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

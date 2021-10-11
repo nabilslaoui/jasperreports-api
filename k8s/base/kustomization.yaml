@@ -1,0 +1,5 @@
+commonLabels:
+  module: jasperreports-api
+    
+resources:
+  - tomcat

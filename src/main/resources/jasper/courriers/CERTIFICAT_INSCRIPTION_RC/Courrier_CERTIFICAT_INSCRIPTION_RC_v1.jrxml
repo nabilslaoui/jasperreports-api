@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="R_Courrier_CA_118" pageWidth="595" pageHeight="842" columnWidth="499" leftMargin="48" rightMargin="48" topMargin="48" bottomMargin="48" uuid="0232025a-165e-454d-a553-4053102e910a">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="courriers/CERTIFICAT_INSCRIPTION_RC/DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="mm"/>
+	<parameter name="headerSubReport" class="net.sf.jasperreports.engine.JasperReport">
+		<parameterDescription><![CDATA[header du rapport]]></parameterDescription>
+	</parameter>
+	<parameter name="footerSubReport" class="net.sf.jasperreports.engine.JasperReport">
+		<parameterDescription><![CDATA[footer du rapport]]></parameterDescription>
+	</parameter>
+	<parameter name="courrierSignatureSubReport" class="net.sf.jasperreports.engine.JasperReport">
+		<parameterDescription><![CDATA[signature du rapport]]></parameterDescription>
+	</parameter>
+	<queryString language="json">
+		<![CDATA[]]>
+	</queryString>
+	<field name="annee_inscription" class="java.lang.String"/>
+	<field name="numero_inscription" class="java.lang.String"/>
+	<field name="decision_recue_1" class="java.lang.String"/>
+	<field name="interesse_decision" class="java.lang.String"/>
+	<field name="decision_exequatur" class="java.lang.String"/>
+	<field name="paragraphe_fin" class="java.lang.String"/>
+	<field name="decision_recue_2" class="java.lang.String"/>
+	<field name="regime" class="java.lang.String"/>
+	<field name="duree" class="java.lang.String"/>
+	<field name="renouvellement_modification" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="299">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport>
+				<reportElement stretchType="ContainerHeight" x="0" y="0" width="499" height="299" uuid="5f203b6a-50be-4f4b-88ab-87a226eb247a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{headerSubReport}]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="118" splitType="Prevent">
+			<textField>
+				<reportElement x="0" y="0" width="499" height="30" uuid="0a47a740-7b48-47bb-8db6-6e7131b55c16">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Marianne" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE("CERTIFICAT D'INSCRIPTION AU REPERTOIRE CIVIL\nN°",$F{annee_inscription}, " - ", $F{numero_inscription})]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="38" width="499" height="14" uuid="3d74884a-2dc3-4f52-b736-ab08e26c92fb"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE($F{decision_recue_1}," ",$F{decision_recue_2})]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="0" y="52" width="499" height="14" uuid="470d7cce-788a-4ce9-8ef9-948de1ba9c41"/>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{interesse_decision}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement key="" positionType="Float" x="0" y="80" width="499" height="14" isRemoveLineWhenBlank="true" uuid="2c706e69-14ca-4b56-90bc-9a6b5b9b3fba">
+					<printWhenExpression><![CDATA[!$F{decision_exequatur}.equals(null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{decision_exequatur}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement key="" positionType="Float" x="0" y="66" width="499" height="14" isRemoveLineWhenBlank="true" uuid="9195c851-7a41-43eb-969b-db8274c860f7">
+					<printWhenExpression><![CDATA[!$F{regime}.equals(null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{regime}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement key="" positionType="Float" x="0" y="94" width="499" height="14" isRemoveLineWhenBlank="true" uuid="1168b4ff-6856-49b1-a838-330d0094a1f5">
+					<printWhenExpression><![CDATA[!$F{duree}.equals(null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{duree}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement key="" positionType="Float" x="0" y="66" width="499" height="14" isRemoveLineWhenBlank="true" uuid="bd97d28b-2f0b-4c2f-bd29-ea411d213707">
+					<printWhenExpression><![CDATA[!$F{renouvellement_modification}.equals(null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{renouvellement_modification}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="100" splitType="Prevent">
+			<subreport isUsingCache="false" runToBottom="false" overflowType="Stretch">
+				<reportElement positionType="Float" x="0" y="15" width="498" height="84" isRemoveLineWhenBlank="true" uuid="78fd5d2d-ea2e-4d72-b83d-b4e1bb6020ee">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{courrierSignatureSubReport}]]></subreportExpression>
+			</subreport>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="0" y="0" width="499" height="14" uuid="9de73c7c-519a-4c97-88b3-7fa4175d02a9"/>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paragraphe_fin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="41" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="497" height="41" uuid="de999025-fb86-4a09-a556-9add07a1a340">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{footerSubReport}]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement x="236" y="5" width="26" height="30" uuid="092ac511-464d-488c-9228-eabcc1370c9f"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="252" y="5" width="13" height="30" uuid="e70b739a-e1bd-41e9-a4f2-55821987d572"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField evaluationTime="Report">
+				<reportElement x="265" y="5" width="26" height="30" uuid="f6d8372d-4864-4812-b72e-c21612006b55"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

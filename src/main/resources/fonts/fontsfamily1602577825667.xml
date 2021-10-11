@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fontFamilies>
+	<fontFamily name="Marianne">
+		<normal><![CDATA[fonts/Marianne/Marianne-Regular.ttf]]></normal>
+		<bold><![CDATA[fonts/Marianne/Marianne-Bold.ttf]]></bold>
+		<italic><![CDATA[fonts/Marianne/Marianne-RegularItalic.ttf]]></italic>
+		<boldItalic><![CDATA[fonts/Marianne/Marianne-BoldItalic.ttf]]></boldItalic>
+		<pdfEncoding><![CDATA[Identity-H]]></pdfEncoding>
+		<pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+		<exportFonts/>
+	</fontFamily>
+</fontFamilies>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SR_Courrier_entete" pageWidth="499" pageHeight="299" columnWidth="499" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="19" uuid="43fb4445-84f2-4d54-8b72-dbef1e4fced3">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JsonTemplate"/>
+	<property name="net.sf.jasperreports.text.truncate.at.char" value="true"/>
+	<queryString language="JSON">
+		<![CDATA[]]>
+	</queryString>
+	<field name="image_bloc_marques" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="image_bloc_marques"/>
+		<fieldDescription><![CDATA[image_bloc_marques]]></fieldDescription>
+	</field>
+	<field name="nom_direction_ligne1" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="nom_direction.ligne1"/>
+		<fieldDescription><![CDATA[nom_direction_ligne1]]></fieldDescription>
+	</field>
+	<field name="nom_direction_ligne2" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="nom_direction.ligne2"/>
+		<fieldDescription><![CDATA[nom_direction_ligne2]]></fieldDescription>
+	</field>
+	<field name="nom_direction_ligne3" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="nom_direction.ligne3"/>
+		<fieldDescription><![CDATA[nom_direction_ligne3]]></fieldDescription>
+	</field>
+	<field name="adresse_internet" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="adresse_internet"/>
+		<fieldDescription><![CDATA[adresse_internet]]></fieldDescription>
+	</field>
+	<field name="service_delivreur" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="service_delivreur"/>
+		<fieldDescription><![CDATA[service_delivreur]]></fieldDescription>
+	</field>
+	<field name="adr_service_delivreur_ligne4" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="adr_service_delivreur.ligne4"/>
+		<fieldDescription><![CDATA[adr_service_delivreur_ligne4]]></fieldDescription>
+	</field>
+	<field name="adr_service_delivreur_ligne6" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="adr_service_delivreur.ligne6"/>
+		<fieldDescription><![CDATA[adr_service_delivreur_ligne6]]></fieldDescription>
+	</field>
+	<field name="tel_service_delivreur" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="tel_service_delivreur"/>
+		<fieldDescription><![CDATA[tel_service_delivreur]]></fieldDescription>
+	</field>
+	<field name="ville_delivrance" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="ville_delivrance"/>
+		<fieldDescription><![CDATA[ville_delivrance]]></fieldDescription>
+	</field>
+	<field name="date_delivrance" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="date_delivrance"/>
+		<fieldDescription><![CDATA[date_delivrance]]></fieldDescription>
+	</field>
+	<field name="identite_requerant_ligne1" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="identite_requerant.ligne1"/>
+		<fieldDescription><![CDATA[identite_requerant_ligne1]]></fieldDescription>
+	</field>
+	<field name="adresse_requerant_ligne2" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="adresse_requerant.ligne2"/>
+		<fieldDescription><![CDATA[adresse_requerant_ligne2]]></fieldDescription>
+	</field>
+	<field name="adresse_requerant_ligne3" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="adresse_requerant.ligne3"/>
+		<fieldDescription><![CDATA[adresse_requerant_ligne3]]></fieldDescription>
+	</field>
+	<field name="adresse_requerant_ligne4" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="adresse_requerant.ligne4"/>
+		<fieldDescription><![CDATA[adresse_requerant_ligne4]]></fieldDescription>
+	</field>
+	<field name="adresse_requerant_ligne5" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="adresse_requerant.ligne5"/>
+		<fieldDescription><![CDATA[adresse_requerant_ligne5]]></fieldDescription>
+	</field>
+	<field name="adresse_requerant_ligne6" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="adresse_requerant.ligne6"/>
+		<fieldDescription><![CDATA[adresse_requerant_ligne6]]></fieldDescription>
+	</field>
+	<field name="adresse_requerant_ligne7" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="adresse_requerant.ligne7"/>
+		<fieldDescription><![CDATA[adresse_requerant_ligne7]]></fieldDescription>
+	</field>
+	<field name="fonction_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="fonction_agent"/>
+		<fieldDescription><![CDATA[fonction_agent]]></fieldDescription>
+	</field>
+	<field name="libelle_departement" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="libelle_departement"/>
+		<fieldDescription><![CDATA[libelle_departement]]></fieldDescription>
+	</field>
+	<field name="bureau_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="bureau_agent"/>
+		<fieldDescription><![CDATA[bureau_agent]]></fieldDescription>
+	</field>
+	<field name="initiales_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="initiales_agent"/>
+		<fieldDescription><![CDATA[initiales_agent]]></fieldDescription>
+	</field>
+	<field name="prenom_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="prenom_agent"/>
+		<fieldDescription><![CDATA[prenom_agent]]></fieldDescription>
+	</field>
+	<field name="nom_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="nom_agent"/>
+		<fieldDescription><![CDATA[nom_agent]]></fieldDescription>
+	</field>
+	<field name="identite_requerant_ligne2" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="identite_requerant.ligne2"/>
+		<fieldDescription><![CDATA[identite_requerant_ligne2]]></fieldDescription>
+	</field>
+	<field name="numero_requete" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="numero_requete"/>
+		<fieldDescription><![CDATA[numero_requete]]></fieldDescription>
+	</field>
+	<background>
+		<band height="23" splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="280" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.layout"/>
+			<textField isBlankWhenNull="true">
+				<reportElement x="247" y="19" width="215" height="20" uuid="6382388f-30f5-409f-b67d-9a30579858a2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Marianne Bold" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nom_direction_ligne1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="247" y="39" width="215" height="20" uuid="8f3a36ca-477b-4d4d-8e4d-831bcdc34a67">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Marianne Bold" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nom_direction_ligne2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="247" y="59" width="215" height="20" uuid="56c7e228-5724-4e8b-8333-326120cb452e">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Marianne Bold" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nom_direction_ligne3}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="220" y="79" width="215" height="15" uuid="41ce3a2f-c6d6-486b-b982-93006daefecc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne Bold" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["A"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="150" width="250" height="20" uuid="47eadf99-8bb0-4e5b-8844-a9dbebf58430">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne Bold" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{service_delivreur}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="220" width="398" height="20" uuid="dcadd780-984e-4fcc-9111-e8a34e3947fd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE($F{ville_delivrance},", le " , $F{date_delivrance} )]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="235" width="498" height="15" uuid="1d6fab38-c281-45b2-801b-0bb215191347">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne Bold" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE($F{prenom_agent} ," ", $F{nom_agent})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="250" width="498" height="15" uuid="b5f744bf-266c-45c5-966d-15d17194dc22">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fonction_agent}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="265" width="498" height="15" uuid="f0a33fc6-aab0-41af-8d49-5a42a6263013">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE($F{libelle_departement}, $F{libelle_departement} != "" && $F{bureau_agent} != "" ? "/" : "" , $F{bureau_agent})]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="1" width="140" height="110" forecolor="#FF3300" uuid="1412eb63-6a3f-4c54-b069-d831499d6315">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[javax.imageio.ImageIO.read(new java.io.ByteArrayInputStream(Base64.getDecoder().decode($F{image_bloc_marques})))]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="178" width="245" height="15" uuid="a77e51be-c3bc-4cff-9946-de4af83e0b7f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE("Référence : " , T($F{numero_requete}))]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="269" y="107" width="230" height="112" uuid="3a3acd14-144d-46e8-a0e3-efb1a9c22d6f">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				</reportElement>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="0" width="230" height="14" uuid="2a96d7b6-469b-47b6-8883-24ec7534228e">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Liberation Mono" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{identite_requerant_ligne1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="14" width="230" height="14" isRemoveLineWhenBlank="true" uuid="b84619b6-f4b4-4a24-8300-a77efc7a5b25">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="mm"/>
+						<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Liberation Mono" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{identite_requerant_ligne2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="28" width="230" height="14" isRemoveLineWhenBlank="true" uuid="2cb18135-b033-4114-b1e4-3ba0758ccb0c">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="mm"/>
+						<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Liberation Mono" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{adresse_requerant_ligne2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="42" width="230" height="14" isRemoveLineWhenBlank="true" uuid="e5ee5cdc-98dd-408b-be16-7ee3f576419b">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="mm"/>
+						<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Liberation Mono" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{adresse_requerant_ligne3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="56" width="230" height="14" uuid="fe281f00-0aa5-41a9-95e5-39082a95712c">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="mm"/>
+						<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Liberation Mono" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{adresse_requerant_ligne4}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="" positionType="Float" x="0" y="70" width="230" height="14" isRemoveLineWhenBlank="true" uuid="f2264cc8-ee4f-40e8-92a5-00652aa9118d">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="mm"/>
+						<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+						<printWhenExpression><![CDATA[$F{adresse_requerant_ligne5} != null]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font fontName="Liberation Mono" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{adresse_requerant_ligne5}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="84" width="230" height="14" uuid="7a06e8a6-6ee1-4d91-80d4-ef30909fda2a">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="mm"/>
+						<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Liberation Mono" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{adresse_requerant_ligne6}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="98" width="230" height="14" isRemoveLineWhenBlank="true" uuid="35a0d75d-8357-4b43-9399-f4e8725d1cf5">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+						<property name="com.jaspersoft.studio.unit.y" value="mm"/>
+					</reportElement>
+					<textElement>
+						<font fontName="Liberation Mono" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{adresse_requerant_ligne7}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

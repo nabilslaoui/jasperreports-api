@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="483" leftMargin="56" rightMargin="56" topMargin="56" bottomMargin="56" uuid="a7c16bee-a7d3-4fc0-855c-8bf5f355670a">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="JSON_INPUT_STREAM" class="java.io.InputStream" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.source" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.sources" class="java.util.List" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.date.pattern" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.number.pattern" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="JSON_LOCALE" class="java.util.Locale" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.locale.code" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="JSON_TIME_ZONE" class="java.util.TimeZone" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.timezone.id" class="java.lang.String" isForPrompting="false"/>
+	<queryString language="JSON">
+		<![CDATA[mentions]]>
+	</queryString>
+	<field name="nature_acte" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="nature_acte"/>
+		<fieldDescription><![CDATA[nature_acte]]></fieldDescription>
+	</field>
+	<field name="titulaires" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="titulaires"/>
+		<fieldDescription><![CDATA[titulaires]]></fieldDescription>
+	</field>
+	<field name="texte_corps_acte" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="texte_corps_acte"/>
+		<fieldDescription><![CDATA[texte_corps_acte]]></fieldDescription>
+	</field>
+	<field name="mentions" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="mentions"/>
+		<fieldDescription><![CDATA[mentions]]></fieldDescription>
+	</field>
+	<variable name="Titulaires" class="java.util.List"/>
+	<title>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="-10" y="24" width="483" height="16" uuid="95fbaca1-0ab5-4301-964d-a83be165b7f4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Liberation Mono" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nature_acte}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<textField isBlankWhenNull="true" textAdjust="StretchHeight">
+				<reportElement stretchType="ContainerHeight" x="0" y="10" width="483" height="16" uuid="9e91d3a6-01f1-4a2e-a7d9-3bd1fca397ce"/>
+				<textElement textAlignment="Left" markup="none">
+					<font fontName="Liberation Mono" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{titulaires}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="190" splitType="Stretch">
+			<textField isBlankWhenNull="true" textAdjust="StretchHeight">
+				<reportElement key="" stretchType="ContainerHeight" x="0" y="10" width="483" height="180" uuid="9aff1273-d1cf-4565-b623-990006941fbb"/>
+				<textElement textAlignment="Left">
+					<font fontName="Liberation Mono" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{texte_corps_acte}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="160">
+			<printWhenExpression><![CDATA[$F{mentions} != ""]]></printWhenExpression>
+			<textField isBlankWhenNull="true" textAdjust="StretchHeight">
+				<reportElement stretchType="ContainerHeight" isPrintRepeatedValues="false" x="0" y="40" width="483" height="120" isPrintWhenDetailOverflows="true" uuid="c164e7d8-ca2c-420d-ad5a-0b966abb8ead"/>
+				<textElement textAlignment="Left">
+					<font fontName="Liberation Mono" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mentions}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="3" y="14" width="480" height="16" uuid="f8113418-4185-4264-9f8e-7b252ec85610"/>
+				<textElement>
+					<font fontName="Liberation Mono" size="11"/>
+				</textElement>
+				<text><![CDATA[MENTIONS MARGINALES : ]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

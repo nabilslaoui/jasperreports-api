@@ -1,0 +1,16 @@
+package fr.nabilslaoui.enterprise.composition.domain.enums;
+
+public enum TypeDocumentComposition {
+	ACTE_MARIAGE,
+	ACTE_DECES,
+	ACTE_NAISSANCE,
+	CA118,
+	ACTE_TEXTE,
+	CARN_CSPAC_01,
+	CERTIFICAT_SITUATION,
+	CARN_CSPAC_02,
+	CARN_CS_01,
+	CERTIFICAT_INSCRIPTION_RCA,
+	CERTIFICAT_INSCRIPTION_RC,
+	ATTESTATION_PACS
+}

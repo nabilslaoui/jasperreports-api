@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: jasperreports-api
+data:
+  SPRING_APPLICATION_JSON:  |
+      {
+        "jasperreports-api.server.url":"http://10.110.192.130",
+        "jasperreports-api.server.port":8090,
+        "jasperreports-api.logs.chemin":"/var/log/tomcat9",
+        "jasperreports-api.logs.nomFichier":"jasperreports-api.log",
+        "jasperreports-api.logging.level":"DEBUG",
+        "api.m2m.credentials":"jasperreports-api:jasperreports-api",
+        "api.m2m.jwt.secret":"secret-jasperreports-api",
+        "api.m2m.jwt.delai.expiration-ms":"86400000",
+        "api.supervision.credentials":"jasperreports-supervision:jasperreports-supervision",
+        "api.supervision.jwt.secret":"secret-supervision-jasperreports-api",
+        "api.supervision.jwt.delai.expiration-ms":"86400000"
+      }
+

@@ -1,0 +1,1660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="R_Extrait_plurilingue_acte_de_mariage" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="935e8a1f-9715-47c3-8eae-62624e861901">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter_acte_mariage.xml"/>
+	<subDataset name="ds_autres" uuid="033c369c-6a6c-40c3-a880-45c109a612fd">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="données_json_MAE.xml"/>
+		<queryString language="json">
+			<![CDATA[autres_enonciations_acte.enonciations]]>
+		</queryString>
+		<field name="node" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="."/>
+			<fieldDescription><![CDATA[.]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="plurilingueSubreport" class="net.sf.jasperreports.engine.JasperReport">
+		<parameterDescription><![CDATA[sous rapport verso]]></parameterDescription>
+	</parameter>
+	<queryString language="JSON">
+		<![CDATA[autres_enonciations_acte.enonciations]]>
+	</queryString>
+	<field name="nature_acte" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="nature_acte"/>
+		<fieldDescription><![CDATA[nature_acte]]></fieldDescription>
+	</field>
+	<field name="etat" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="etat"/>
+		<fieldDescription><![CDATA[etat]]></fieldDescription>
+	</field>
+	<field name="service_etat_civil" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="service_etat_civil"/>
+		<fieldDescription><![CDATA[service_etat_civil]]></fieldDescription>
+	</field>
+	<field name="reference_acte" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="reference_acte"/>
+		<fieldDescription><![CDATA[reference_acte]]></fieldDescription>
+	</field>
+	<field name="date_acte_jour" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="date_acte.jour"/>
+		<fieldDescription><![CDATA[date_acte_jour]]></fieldDescription>
+	</field>
+	<field name="date_acte_mois" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="date_acte.mois"/>
+		<fieldDescription><![CDATA[date_acte_mois]]></fieldDescription>
+	</field>
+	<field name="date_acte_annee" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="date_acte.annee"/>
+		<fieldDescription><![CDATA[date_acte_annee]]></fieldDescription>
+	</field>
+	<field name="lieu_acte" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="lieu_acte"/>
+		<fieldDescription><![CDATA[lieu_acte]]></fieldDescription>
+	</field>
+	<field name="titulaire_1_nom_avant_mariage" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="titulaire_1.nom_avant_mariage"/>
+		<fieldDescription><![CDATA[titulaire_1_nom_avant_mariage]]></fieldDescription>
+	</field>
+	<field name="titulaire_1_prenoms" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="titulaire_1.prenoms"/>
+		<fieldDescription><![CDATA[titulaire_1_prenoms]]></fieldDescription>
+	</field>
+	<field name="titulaire_1_date_naissance_jour" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="titulaire_1.date_naissance.jour"/>
+		<fieldDescription><![CDATA[titulaire_1_date_naissance_jour]]></fieldDescription>
+	</field>
+	<field name="titulaire_1_date_naissance_mois" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="titulaire_1.date_naissance.mois"/>
+		<fieldDescription><![CDATA[titulaire_1_date_naissance_mois]]></fieldDescription>
+	</field>
+	<field name="titulaire_1_date_naissance_annee" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="titulaire_1.date_naissance.annee"/>
+		<fieldDescription><![CDATA[titulaire_1_date_naissance_annee]]></fieldDescription>
+	</field>
+	<field name="titulaire_1_lieu_naissance" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="titulaire_1.lieu_naissance"/>
+		<fieldDescription><![CDATA[titulaire_1_lieu_naissance]]></fieldDescription>
+	</field>
+	<field name="titulaire_1_nom_apres_mariage" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="titulaire_1.nom_apres_mariage"/>
+		<fieldDescription><![CDATA[titulaire_1_nom_apres_mariage]]></fieldDescription>
+	</field>
+	<field name="titulaire_2_nom_avant_mariage" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="titulaire_2.nom_avant_mariage"/>
+		<fieldDescription><![CDATA[titulaire_2_nom_avant_mariage]]></fieldDescription>
+	</field>
+	<field name="titulaire_2_prenoms" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="titulaire_2.prenoms"/>
+		<fieldDescription><![CDATA[titulaire_2_prenoms]]></fieldDescription>
+	</field>
+	<field name="titulaire_2_date_naissance_jour" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="titulaire_2.date_naissance.jour"/>
+		<fieldDescription><![CDATA[titulaire_2_date_naissance_jour]]></fieldDescription>
+	</field>
+	<field name="titulaire_2_date_naissance_mois" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="titulaire_2.date_naissance.mois"/>
+		<fieldDescription><![CDATA[titulaire_2_date_naissance_mois]]></fieldDescription>
+	</field>
+	<field name="titulaire_2_date_naissance_annee" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="titulaire_2.date_naissance.annee"/>
+		<fieldDescription><![CDATA[titulaire_2_date_naissance_annee]]></fieldDescription>
+	</field>
+	<field name="titulaire_2_lieu_naissance" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="titulaire_2.lieu_naissance"/>
+		<fieldDescription><![CDATA[titulaire_2_lieu_naissance]]></fieldDescription>
+	</field>
+	<field name="titulaire_2_nom_apres_mariage" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="titulaire_2.nom_apres_mariage"/>
+		<fieldDescription><![CDATA[titulaire_2_nom_apres_mariage]]></fieldDescription>
+	</field>
+	<field name="date_delivrance_jour" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="date_delivrance.jour"/>
+		<fieldDescription><![CDATA[date_delivrance_jour]]></fieldDescription>
+	</field>
+	<field name="date_delivrance_mois" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="date_delivrance.mois"/>
+		<fieldDescription><![CDATA[date_delivrance_mois]]></fieldDescription>
+	</field>
+	<field name="date_delivrance_annee" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="date_delivrance.annee"/>
+		<fieldDescription><![CDATA[date_delivrance_annee]]></fieldDescription>
+	</field>
+	<field name="fonction_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="fonction_agent"/>
+		<fieldDescription><![CDATA[fonction_agent]]></fieldDescription>
+	</field>
+	<field name="signature_manuscrite" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="signature_manuscrite"/>
+		<fieldDescription><![CDATA[signature_manuscrite]]></fieldDescription>
+	</field>
+	<field name="sceau_ministere" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="sceau_ministere"/>
+		<fieldDescription><![CDATA[sceau_ministere]]></fieldDescription>
+	</field>
+	<field name="nombre_enonciations" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.json.field.expression" value="autres_enonciations_acte.nombre_enonciations"/>
+		<fieldDescription><![CDATA[autres_enonciations_acte.nombre_enonciations]]></fieldDescription>
+	</field>
+	<variable name="jour_mariage_1" class="java.lang.String">
+		<variableExpression><![CDATA[IF(LEN($F{date_acte_jour} )==1,"0",LEFT($F{date_acte_jour},1))]]></variableExpression>
+	</variable>
+	<variable name="jour_mariage_2" class="java.lang.String">
+		<variableExpression><![CDATA[RIGHT($F{date_acte_jour},1)]]></variableExpression>
+	</variable>
+	<variable name="mois_mariage_1" class="java.lang.String">
+		<variableExpression><![CDATA[IF(LEN($F{date_acte_mois} )==1,"0",LEFT($F{date_acte_mois},1))]]></variableExpression>
+	</variable>
+	<variable name="mois_mariage_2" class="java.lang.String">
+		<variableExpression><![CDATA[RIGHT($F{date_acte_mois},1)]]></variableExpression>
+	</variable>
+	<variable name="annee_mariage_1" class="java.lang.String">
+		<variableExpression><![CDATA[MID($F{date_acte_annee},1,1)]]></variableExpression>
+	</variable>
+	<variable name="annee_mariage_2" class="java.lang.String">
+		<variableExpression><![CDATA[MID($F{date_acte_annee},2,1)]]></variableExpression>
+	</variable>
+	<variable name="annee_mariage_3" class="java.lang.String">
+		<variableExpression><![CDATA[MID($F{date_acte_annee},3,1)]]></variableExpression>
+	</variable>
+	<variable name="annee_mariage_4" class="java.lang.String">
+		<variableExpression><![CDATA[MID($F{date_acte_annee},4,1)]]></variableExpression>
+	</variable>
+	<variable name="jour_naissance_titulaire1_1" class="java.lang.String">
+		<variableExpression><![CDATA[IF(LEN($F{titulaire_1_date_naissance_jour} )==1,"0",LEFT($F{titulaire_1_date_naissance_jour},1))]]></variableExpression>
+	</variable>
+	<variable name="jour_naissance_titulaire1_2" class="java.lang.String">
+		<variableExpression><![CDATA[RIGHT($F{titulaire_1_date_naissance_jour},1)]]></variableExpression>
+	</variable>
+	<variable name="mois_naissance_titulaire1_1" class="java.lang.String">
+		<variableExpression><![CDATA[IF(LEN($F{titulaire_1_date_naissance_mois} )==1,"0",LEFT($F{titulaire_1_date_naissance_mois},1))]]></variableExpression>
+	</variable>
+	<variable name="mois_naissance_titulaire1_2" class="java.lang.String">
+		<variableExpression><![CDATA[RIGHT($F{titulaire_1_date_naissance_mois},1)]]></variableExpression>
+	</variable>
+	<variable name="annee_naissance_titulaire1_1" class="java.lang.String">
+		<variableExpression><![CDATA[MID($F{titulaire_1_date_naissance_annee},1,1)]]></variableExpression>
+	</variable>
+	<variable name="annee_naissance_titulaire1_2" class="java.lang.String">
+		<variableExpression><![CDATA[MID($F{titulaire_1_date_naissance_annee},2,1)]]></variableExpression>
+	</variable>
+	<variable name="annee_naissance_titulaire1_3" class="java.lang.String">
+		<variableExpression><![CDATA[MID($F{titulaire_1_date_naissance_annee},3,1)]]></variableExpression>
+	</variable>
+	<variable name="annee_naissance_titulaire1_4" class="java.lang.String">
+		<variableExpression><![CDATA[MID($F{titulaire_1_date_naissance_annee},4,1)]]></variableExpression>
+	</variable>
+	<variable name="jour_naissance_titulaire2_1" class="java.lang.String">
+		<variableExpression><![CDATA[IF(LEN($F{titulaire_2_date_naissance_jour} )==1,"0",LEFT($F{titulaire_2_date_naissance_jour},1))]]></variableExpression>
+	</variable>
+	<variable name="jour_naissance_titulaire2_2" class="java.lang.String">
+		<variableExpression><![CDATA[RIGHT($F{titulaire_2_date_naissance_jour},1)]]></variableExpression>
+	</variable>
+	<variable name="mois_naissance_titulaire2_1" class="java.lang.String">
+		<variableExpression><![CDATA[IF(LEN($F{titulaire_2_date_naissance_mois} )==1,"0",LEFT($F{titulaire_2_date_naissance_mois},1))]]></variableExpression>
+	</variable>
+	<variable name="mois_naissance_titulaire2_2" class="java.lang.String">
+		<variableExpression><![CDATA[RIGHT($F{titulaire_2_date_naissance_mois},1)]]></variableExpression>
+	</variable>
+	<variable name="annee_naissance_titulaire2_1" class="java.lang.String">
+		<variableExpression><![CDATA[MID($F{titulaire_2_date_naissance_annee},1,1)]]></variableExpression>
+	</variable>
+	<variable name="annee_naissance_titulaire2_2" class="java.lang.String">
+		<variableExpression><![CDATA[MID($F{titulaire_2_date_naissance_annee},2,1)]]></variableExpression>
+	</variable>
+	<variable name="annee_naissance_titulaire2_3" class="java.lang.String">
+		<variableExpression><![CDATA[MID($F{titulaire_2_date_naissance_annee},3,1)]]></variableExpression>
+	</variable>
+	<variable name="annee_naissance_titulaire2_4" class="java.lang.String">
+		<variableExpression><![CDATA[MID($F{titulaire_2_date_naissance_annee},4,1)]]></variableExpression>
+	</variable>
+	<variable name="jour_delivrance_1" class="java.lang.String">
+		<variableExpression><![CDATA[IF(LEN($F{date_delivrance_jour} )==1,"0",LEFT($F{date_delivrance_jour},1))]]></variableExpression>
+	</variable>
+	<variable name="jour_delivrance_2" class="java.lang.String">
+		<variableExpression><![CDATA[RIGHT($F{date_delivrance_jour},1)]]></variableExpression>
+	</variable>
+	<variable name="mois_delivrance_1" class="java.lang.String">
+		<variableExpression><![CDATA[IF(LEN($F{date_delivrance_mois} )==1,"0",LEFT($F{date_delivrance_mois},1))]]></variableExpression>
+	</variable>
+	<variable name="mois_delivrance_2" class="java.lang.String">
+		<variableExpression><![CDATA[RIGHT($F{date_delivrance_mois},1)]]></variableExpression>
+	</variable>
+	<variable name="annee_delivrance_1" class="java.lang.String">
+		<variableExpression><![CDATA[MID($F{date_delivrance_annee},1,1)]]></variableExpression>
+	</variable>
+	<variable name="annee_delivrance_2" class="java.lang.String">
+		<variableExpression><![CDATA[MID($F{date_delivrance_annee},2,1)]]></variableExpression>
+	</variable>
+	<variable name="annee_delivrance_3" class="java.lang.String">
+		<variableExpression><![CDATA[MID($F{date_delivrance_annee},3,1)]]></variableExpression>
+	</variable>
+	<variable name="annee_delivrance_4" class="java.lang.String">
+		<variableExpression><![CDATA[MID($F{date_delivrance_annee},4,1)]]></variableExpression>
+	</variable>
+	<detail>
+		<band height="818" splitType="Stretch">
+			<componentElement>
+				<reportElement stretchType="RelativeToTallestObject" x="90" y="458" width="435" height="11" isRemoveLineWhenBlank="true" uuid="b18664b8-57a7-4cd8-b9a5-a198f23f0011">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.CONTENTS.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[new Boolean($F{nombre_enonciations}> 5)]]></printWhenExpression>
+				</reportElement>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="ds_autres" uuid="fe2c4640-0d8a-4f14-9dc4-b1062e1e0079">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("autres_enonciations_acte.enonciations")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="11" width="435">
+						<textField textAdjust="StretchHeight">
+							<reportElement x="0" y="0" width="435" height="11" uuid="5503d31e-3beb-43c1-9074-893fa959b8f2"/>
+							<textElement>
+								<font fontName="Marianne" size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{node}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement stretchType="RelativeToTallestObject" x="90" y="458" width="433" height="13" isRemoveLineWhenBlank="true" uuid="46647e30-2847-4adf-b795-b5e68ab1717c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.CONTENTS.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<printWhenExpression><![CDATA[new Boolean($F{nombre_enonciations}< 6)]]></printWhenExpression>
+				</reportElement>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="ds_autres" uuid="fa90c252-f0a8-4981-abf4-63bde7b95b0c">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("autres_enonciations_acte.enonciations")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="13" width="433">
+						<textField textAdjust="StretchHeight">
+							<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="433" height="13" isRemoveLineWhenBlank="true" uuid="da27d078-e1c5-4379-bf9c-1c41e877ff7f">
+								<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+							</reportElement>
+							<textElement>
+								<font fontName="Marianne"/>
+								<paragraph lineSpacing="Single" lineSpacingSize="1.0"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{node}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<rectangle>
+				<reportElement x="40" y="557" width="540" height="231" forecolor="#FFFCFC" uuid="e64ac338-f932-472e-9449-f0e2133a5c2d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Opaque" x="402" y="356" width="30" height="15" forecolor="#0055FF" uuid="eb796741-9f36-4a9a-94f0-ea708a23dc20">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<line>
+				<reportElement x="50" y="61" width="495" height="1" forecolor="#0055FF" uuid="4f2254d4-349a-47f1-97cd-b59cafc8a1b4">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<rectangle>
+				<reportElement x="72" y="105" width="23" height="30" forecolor="#0055FF" uuid="265dbc32-b5c4-4b93-ab37-a7c516282027">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="72" y="105" width="23" height="30" forecolor="#0055FF" uuid="52cf8934-030f-486e-8804-9667d56fd75a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="230" y="105" width="22" height="30" forecolor="#0055FF" uuid="57031386-e840-4d39-8b75-5e6d924ecbe2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="230" y="105" width="22" height="30" forecolor="#0055FF" uuid="601c3be4-8b4c-437e-ac57-79c23b2de2a1">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="105" width="100" height="30" forecolor="#0055FF" uuid="f468eeae-968b-4db6-9866-996b64542017">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ÉTAT :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="110" width="298" height="14" forecolor="#0055FF" uuid="e1416d48-cc50-4677-9cf8-95efcd268c3f">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[SERVICE DE L'ÉTAT CIVIL DE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="80" width="85" height="10" forecolor="#0055FF" uuid="198e15c4-16f6-4c31-a4d1-b926e8d949cf"/>
+				<textElement textAlignment="Right">
+					<font fontName="Marianne" size="8"/>
+				</textElement>
+				<text><![CDATA[FORMULE B]]></text>
+			</staticText>
+			<line>
+				<reportElement x="50" y="65" width="495" height="1" forecolor="#0055FF" uuid="7046d4f4-6c48-41db-b3e7-c9afa8107380">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="95" y="47" width="415" height="14" forecolor="#0055FF" uuid="ed14fbe8-315b-4ec4-95a4-bd5f396427bb">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<text><![CDATA[EXTRAITS PLURILINGUES D'ACTES  DE L'ÉTAT CIVIL]]></text>
+			</staticText>
+			<line>
+				<reportElement x="50" y="164" width="495" height="1" forecolor="#0055FF" uuid="c022a00b-dcd7-4cf4-a6ef-49d8d287c916">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="50" y="224" width="495" height="1" forecolor="#0055FF" uuid="8e767ee1-7d2a-4334-86f1-c79ce5bfb9e7">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="50" y="254" width="495" height="1" forecolor="#0055FF" uuid="2a6ad5fd-74d7-43f5-a7f8-4ad757d3095e">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="50" y="284" width="495" height="1" forecolor="#0055FF" uuid="3c59e1c2-f540-4654-b977-15b614f622dd">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="50" y="343" width="495" height="1" forecolor="#0055FF" uuid="dba92c15-fdbb-4e9f-b20c-e8742795eadd">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="50" y="437" width="495" height="1" forecolor="#0055FF" uuid="0a4a0099-8d61-4954-9ea5-cc63b760cc6b">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="50" y="556" width="495" height="1" forecolor="#0055FF" uuid="f89e85db-edf8-4dcb-8478-f735d84126ca">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="50" y="653" width="495" height="1" forecolor="#0055FF" uuid="6ac52b45-9004-4d0b-8852-6fc49788d1ac">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="50" y="164" width="1" height="490" forecolor="#0055FF" uuid="ddedc03a-4705-4567-befd-13b3958f8f18">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="545" y="164" width="1" height="490" forecolor="#0055FF" uuid="d26a0361-6617-46a5-ae9c-5e0016d80689">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<rectangle>
+				<reportElement x="57" y="174" width="22" height="30" forecolor="#0055FF" uuid="91153c7f-1714-4474-89bf-0122fc087c57">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="57" y="174" width="22" height="30" forecolor="#0055FF" uuid="5e3d767d-fcac-4867-9748-5fc33c530e14">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="224" width="30" height="30" forecolor="#0055FF" uuid="efb1fcdc-b428-4aaf-8194-80498e7f0060">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="284" width="30" height="30" forecolor="#0055FF" uuid="3dfda81f-55bd-48cd-86f9-1dea1df5a223">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="314" width="30" height="30" forecolor="#0055FF" uuid="4f9b42f4-6d2e-47eb-ab0d-64741ec40a55">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="176" width="259" height="29" forecolor="#0055FF" uuid="309c0699-442b-47f8-ab7f-ddf9ffbe4851">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EXTRAIT DE L'ACTE DE  ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="80" y="224" width="1" height="275" forecolor="#0055FF" uuid="213e54f7-17c7-4a8e-b839-8bc1f8002f7d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="80" y="557" width="1" height="57" forecolor="#0055FF" uuid="7efeec8d-c54d-4d5b-baea-89a4c64773cd">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="50" y="615" width="30" height="1" forecolor="#0055FF" uuid="30ae4058-3944-4de5-a556-f07c8f4fe763">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="86" y="226" width="69" height="27" forecolor="#0055FF" uuid="5943ea9e-f51b-49e7-8e18-498b335c080e"/>
+				<textElement>
+					<font fontName="Marianne" size="10"/>
+				</textElement>
+				<text><![CDATA[DATE ET LIEU DU MARIAGE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="289" width="144" height="21" forecolor="#0055FF" uuid="0f226b73-2f78-4a35-9548-b1bbcac8ebc5"/>
+				<textElement>
+					<font fontName="Marianne" size="10"/>
+				</textElement>
+				<text><![CDATA[NOM AVANT LE MARIAGE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="321" width="144" height="14" forecolor="#0055FF" uuid="2ecdd127-e387-4a24-9281-1911f9c3daa1">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="10"/>
+				</textElement>
+				<text><![CDATA[PRÉNOMS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="261" width="38" height="21" forecolor="#0055FF" uuid="e05803fb-38ab-4886-bed9-ca621e23164e">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="10"/>
+				</textElement>
+				<text><![CDATA[MARI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="468" y="261" width="57" height="21" forecolor="#0055FF" uuid="eb535fad-5af1-48cf-b31b-5769822bd3bf">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="10"/>
+				</textElement>
+				<text><![CDATA[FEMME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="564" width="142" height="30" forecolor="#0055FF" uuid="4cc4eb33-48c3-4dbc-a25e-4cb90d3f4a4b"/>
+				<textElement>
+					<font fontName="Marianne" size="10"/>
+				</textElement>
+				<text><![CDATA[DATE DE DÉLIVRANCE, SIGNATURE, SCEAU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="173" width="134" height="30" forecolor="#0055FF" uuid="5cd3921a-4416-469e-b94e-ac82060c2c9a"/>
+				<textElement>
+					<font fontName="Marianne" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MARIAGE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="475" y="176" width="29" height="29" forecolor="#0055FF" uuid="c253d3b1-f6f6-4795-8f80-ee66ef9b278d">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N°]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="283" y="261" width="23" height="20" forecolor="#0055FF" uuid="4433b438-eb15-479b-80b0-fc13b1f6b6c6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="282" y="260" width="23" height="20" forecolor="#0055FF" uuid="0207be0a-f0eb-4f5a-adb3-3db7e2643a52">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="439" y="262" width="23" height="20" forecolor="#0055FF" uuid="18e74095-0903-4c5b-a1f6-0c2467e8ba0f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="439" y="261" width="24" height="20" forecolor="#0055FF" uuid="736afcd8-d2a5-44b5-a934-b9d41ce9a4a7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="155" y="234" width="30" height="15" forecolor="#0055FF" uuid="84d57762-e10e-4e3b-8563-c51e407ed90c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="190" y="234" width="30" height="15" forecolor="#0055FF" uuid="0d050053-4d41-4ebe-a9df-1b33de7bd102">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="225" y="234" width="60" height="15" forecolor="#0055FF" uuid="edc369a3-6ed7-42fc-8a04-0c2b65d3dd9c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<line>
+				<reportElement x="270" y="234" width="1" height="15" forecolor="#0055FF" uuid="bd601ba9-bb0f-4a06-83fa-11d6581d4972">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="205" y="234" width="1" height="15" forecolor="#0055FF" uuid="61ca3db0-210f-4dfe-a7b9-08b6ed62de45">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="170" y="234" width="1" height="15" forecolor="#0055FF" uuid="a6894678-ae0e-4764-b341-7e78c018b732">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="255" y="234" width="1" height="15" forecolor="#0055FF" uuid="46e2c7c6-1604-4047-b8b3-a17569a4ebbc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="240" y="234" width="1" height="15" forecolor="#0055FF" uuid="b851b1a8-3630-4c20-8868-2cecf0e7cf25">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="155" y="224" width="30" height="20" forecolor="#0055FF" uuid="ac24e569-f962-4090-be71-f45c5ebcb069"/>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="225" width="30" height="18" forecolor="#0055FF" uuid="fb365522-59e1-455b-a516-6c2e789bb3be"/>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="225" width="58" height="18" forecolor="#0055FF" uuid="c198f2d2-3f8f-485d-a3ee-6d9d1c488f5d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[An]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="245" y="570" width="30" height="15" forecolor="#0055FF" uuid="86e3d6ae-7cab-42af-b853-56028100f63f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="280" y="570" width="30" height="15" forecolor="#0055FF" uuid="245fdf0f-20ee-4756-a69d-1a1956a44676">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="315" y="570" width="60" height="15" forecolor="#0055FF" uuid="707a479f-8686-4ef5-a77e-587f9bbcdf46">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<line>
+				<reportElement x="360" y="570" width="1" height="15" forecolor="#0055FF" uuid="d89aa930-1156-4058-a889-351e6ee837f4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="295" y="570" width="1" height="15" forecolor="#0055FF" uuid="7d1dcb55-f7e3-4525-91ef-49f6121afbcf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="260" y="570" width="1" height="15" forecolor="#0055FF" uuid="151f0cb3-0822-4870-a181-3a1d6586fc8d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="345" y="570" width="1" height="15" forecolor="#0055FF" uuid="032ec768-30e0-4187-98fb-12aa52e2fbe9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="330" y="570" width="1" height="15" forecolor="#0055FF" uuid="56ee70a9-8060-48d3-a94d-51cabc16d0fb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="245" y="560" width="30" height="20" forecolor="#0055FF" uuid="b86eb21a-c7aa-4b66-b037-87730c1de9ef"/>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="561" width="30" height="26" forecolor="#0055FF" uuid="d3ce9a4e-6d7c-4465-b4ab-ca82dc6d17cf"/>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="561" width="58" height="9" forecolor="#0055FF" uuid="cfe97765-bbc2-4f8c-91b5-680b0dd87e05"/>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[An]]></text>
+			</staticText>
+			<line>
+				<reportElement x="394" y="285" width="1" height="153" forecolor="#0055FF" uuid="c53b5d49-25d4-4a7f-bb40-e57190bbbb5e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="248" y="285" width="1" height="152" forecolor="#0055FF" uuid="96d958b5-897f-4c68-ac35-c5a6038b8482">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="546" y="170" width="1" height="487" forecolor="#0055FF" uuid="e681d380-a4eb-4653-8a53-964c793b2165">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="4.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="54" y="655" width="494" height="1" forecolor="#0055FF" uuid="13dfab70-4030-4b33-b7f2-0df97b88bed8">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="4.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="535" y="254" width="10" height="30" forecolor="#0055FF" uuid="c0599eb2-707c-4574-936a-0c33324e1f5b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="384" y="254" width="10" height="30" forecolor="#0055FF" uuid="c78dd74e-42f1-49ab-b1de-a56879dd9df6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<line direction="BottomUp">
+				<reportElement x="394" y="254" width="10" height="30" forecolor="#0055FF" uuid="995cb6c6-8cfc-420d-b561-9602cbe2a6c2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<line direction="BottomUp">
+				<reportElement x="248" y="255" width="10" height="30" forecolor="#0055FF" uuid="3e8bf9a5-fb18-4329-a19c-f147fe5ee3e1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="50" y="314" width="495" height="1" forecolor="#0055FF" uuid="c4bcd9d2-e890-4dda-83e6-d195ba7f6886">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="86" y="350" width="159" height="15" forecolor="#0055FF" uuid="29f29b9e-1f22-483c-a339-6109f8ea4c32">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="10"/>
+				</textElement>
+				<text><![CDATA[DATE ET LIEU DE NAISSANCE]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="255" y="355" width="30" height="15" forecolor="#0055FF" uuid="6534d5ec-bb96-48dd-9d59-605d71ec9f3b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="288" y="355" width="30" height="15" forecolor="#0055FF" uuid="f0404935-009a-4040-b177-179f7aaee047">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="323" y="355" width="60" height="15" forecolor="#0055FF" uuid="0ac95bf3-c3d1-4348-beac-279ac32e2709">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<line>
+				<reportElement x="368" y="355" width="1" height="15" forecolor="#0055FF" uuid="f974c860-d133-4363-acb1-5a935bee9626">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="303" y="355" width="1" height="15" forecolor="#0055FF" uuid="443419d8-6756-4872-b5e5-a196b50f5f3c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="269" y="355" width="1" height="15" forecolor="#0055FF" uuid="c4cf4b38-4330-4295-ba27-7d5205341cc4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="353" y="355" width="1" height="15" forecolor="#0055FF" uuid="2fcc9103-1e0d-43b5-b048-7e22d152eff7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="338" y="355" width="1" height="15" forecolor="#0055FF" uuid="a82af6c3-5caf-48db-a072-6afb522b79b9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="253" y="345" width="30" height="20" forecolor="#0055FF" uuid="cb3aca02-9029-4ce7-a2eb-1abe4de73708"/>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="346" width="30" height="26" forecolor="#0055FF" uuid="d9d4123d-312f-4249-b8d5-d30c40a0a56a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="346" width="58" height="26" forecolor="#0055FF" uuid="5d8cd7ee-f641-4eb1-b1be-b4c27518cc43"/>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[An]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="346" width="30" height="60" forecolor="#0055FF" uuid="2bbd2b33-2958-46d8-b310-1d217ddf4718">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[9]]></text>
+			</staticText>
+			<line>
+				<reportElement x="50" y="406" width="495" height="1" forecolor="#0055FF" uuid="7109d94b-ee80-4c47-94ad-3aeddd0c2b52">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="51" y="407" width="28" height="30" forecolor="#0055FF" uuid="9f2c6788-9f36-4b40-a887-e24f7cdeb37d">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="415" width="150" height="15" forecolor="#0055FF" uuid="afd33283-3b27-4f48-a6c1-b8cfb32ca3a8">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="10"/>
+				</textElement>
+				<text><![CDATA[NOM APRES LE MARIAGE]]></text>
+			</staticText>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="51" y="205" width="483" height="19" uuid="2a992274-57c0-45f9-8ab4-131bb683751e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reference_acte}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="155" y="595" width="50" height="50" uuid="11f655ea-9053-4350-bdd0-65245143f43f"/>
+				<imageExpression><![CDATA[javax.imageio.ImageIO.read(new java.io.ByteArrayInputStream(Base64.getDecoder().decode($F{sceau_ministere})))]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="390" y="587" width="140" height="60" uuid="9218552e-5c5a-49ae-a4a9-bc8788cea87f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[javax.imageio.ImageIO.read(new java.io.ByteArrayInputStream(Base64.getDecoder().decode($F{signature_manuscrite})))]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="436" y="356" width="30" height="15" forecolor="#0055FF" uuid="c1e7d9ca-8b14-4c7d-9025-935abf863e31">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="471" y="356" width="60" height="15" forecolor="#0055FF" uuid="cbc2fd55-af64-4aae-8320-31895d6df677">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<line>
+				<reportElement x="516" y="356" width="1" height="15" forecolor="#0055FF" uuid="7c2c41c3-8a9c-4723-9733-00b8364bb9b3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="451" y="356" width="1" height="15" forecolor="#0055FF" uuid="4451eb30-4d84-4e34-8aa8-89c8bd4cc5b5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="416" y="356" width="1" height="15" forecolor="#0055FF" uuid="69deabcf-537f-46c6-a5c8-2acbff2f8cc1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="501" y="356" width="1" height="15" forecolor="#0055FF" uuid="28ba09ca-9741-4378-8b02-730946ef1dc5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="486" y="356" width="1" height="15" forecolor="#0055FF" uuid="c5795b54-ddfe-409e-acbf-cf3ee92d9e2f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="401" y="346" width="30" height="11" forecolor="#0055FF" uuid="45649168-c733-4d6a-99fb-9e55d15e3efc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="347" width="24" height="10" forecolor="#0055FF" uuid="eb897ad9-a4a9-48e9-a3ed-d3e5ea470fd1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="347" width="58" height="26" forecolor="#0055FF" uuid="8e6343c3-a589-4198-a50f-3b1c6d0c05a5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Marianne" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[An]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="680" width="495" height="106" forecolor="#0055FF" uuid="701d63a7-c85a-4510-a2aa-767d4ed080f1"/>
+				<textElement>
+					<font fontName="LiberationSans" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SYMBOLES / ZEICHEN / SYMBOLS / SIMBOLOS / ΣΥΜΒΟΛΑ / SIMBOLI / SYMBOLEN / SIMBOLOS / IŞARETLER /SIMBOLI
+
+- Jo : 
+- Mo : 
+- An : 
+- Sc :
+ 
+- Div : 
+- A : 
+- Dm : 
+
+- Df : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="88" y="697" width="481" height="89" forecolor="#0055FF" uuid="ad9d2eaf-43f2-4143-94f6-f24e17a17caf"/>
+				<textElement>
+					<font fontName="LiberationSans" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jour / Tag / Day / Día / ’Ηµέρα / Giorno / Dag / Dia / Gün / Dan
+Mois / Monat / Month / Mes / Μήν / Mese / Maand / Mês / Ay / Mesec
+Année / Jahr / Year / Año / ’Ετος / Anno / Jaar / Ano / Yõl / Godina
+Séparation de corps / Trennung von Tisch und Bett / Legal separation / Separación personal /Χωρισμός από τραπέζης και κοίτης / Separazione personale / Scheidung van tafel en bed / Separação de pessoas e bens / Ayrılık / Fizička rastava
+Divorce / Scheidung / Divorce / Divorcio / Διαζύγιον / Divorzio / Echtscheiding / Divórcio / Boşanma / Razvod
+Annulation / Nichtigerklärung / Annulment / Anulación / Ακύρωσις / Annullamento / Nietigverklaring / Anulação / Iptal / Poništenje
+Décès du mari / Tod des Ehemanns / Death of the husband / Defunción del marido / Θάνατος τοϋ συζύγου/ Morte del marito / Overlijden van de man / Óbito do marido / Kocanın ölümü / Smrt muža
+Décès de la femme / Tod der Ehefrau / Death of the wife / Defunción de la mujer / Θάνατος τής συζύγου/ Morte della moglie / Overlijden van de vrouw / Óbito da mulher / Karının ölümü / Smrt žene
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="438" width="30" height="60" forecolor="#0055FF" uuid="9b65e4c0-5c52-464e-8570-42e687ea60bf">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[11]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="556" width="30" height="58" forecolor="#0055FF" uuid="713dfd63-b5a4-42c5-8521-a5127bc9769c">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[12]]></text>
+			</staticText>
+			<line>
+				<reportElement x="50" y="498" width="30" height="1" forecolor="#0055FF" uuid="73dc3ecd-6477-4ce2-91d2-90cea1ea1b10">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="292" y="226" width="243" height="26" uuid="b62dca33-ba3f-445a-ad7b-e7f8825e04c3">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lieu_acte}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="254" y="284" width="130" height="30" isRemoveLineWhenBlank="true" uuid="c554c069-1078-4ff1-bcec-171e40c169ef">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{titulaire_1_nom_avant_mariage}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="400" y="284" width="130" height="30" isRemoveLineWhenBlank="true" uuid="22716595-c449-4866-9c76-f5ec5502a082">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{titulaire_2_nom_avant_mariage}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="254" y="407" width="135" height="30" uuid="82e39477-f65b-4740-bba1-7757c54c8e45">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{titulaire_1_nom_apres_mariage}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="400" y="407" width="135" height="30" isRemoveLineWhenBlank="true" uuid="17151e5c-d6a4-4f96-9404-4e9ad5e20c96">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{titulaire_2_nom_apres_mariage}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="254" y="314" width="130" height="30" uuid="389012f4-12ba-4c11-8081-960ecdd2d2ff">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{titulaire_1_prenoms}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="400" y="315" width="130" height="28" uuid="7d587929-a45e-4c46-bf4a-b12f5940b8f3">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{titulaire_2_prenoms}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="254" y="373" width="135" height="30" isRemoveLineWhenBlank="true" uuid="d8fbb8a6-ef96-43bb-bf2a-fdc82bbc91b2">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{titulaire_1_lieu_naissance}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="400" y="373" width="135" height="30" isRemoveLineWhenBlank="true" uuid="46525441-9697-4046-9e01-24e73b324f2a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{titulaire_2_lieu_naissance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="86" y="444" width="218" height="15" forecolor="#0055FF" uuid="c9ca0d91-56a7-4c4b-b846-6fb520c0d44e"/>
+				<textElement>
+					<font fontName="Marianne" size="10"/>
+				</textElement>
+				<text><![CDATA[AUTRES ÉNONCIATIONS DE L'ACTE]]></text>
+			</staticText>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="388" y="559" width="137" height="30" uuid="bd6217a0-70b2-442c-a8e5-f05277fa9beb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fonction_agent}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="155" y="234" width="15" height="15" uuid="b902e949-8b21-468f-9a5a-4247268b05d0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{jour_mariage_1}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="171" y="234" width="15" height="15" uuid="ad4d0cce-e54f-428e-b5d1-ad8de33ab557">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{jour_mariage_2}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="190" y="234" width="15" height="15" uuid="8b1b6f1d-f275-4fa2-a260-0d49e2c1bc70">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{mois_mariage_1}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="206" y="234" width="15" height="15" uuid="4ff33bc9-54fc-4348-93ec-c8b3c3052301">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{mois_mariage_2}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="225" y="234" width="15" height="15" uuid="e9dc6ee5-97b6-4210-9af4-8bc170d7a06f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{annee_mariage_1}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="240" y="234" width="15" height="15" uuid="e961ca47-cbd5-4827-9982-8dc5e51a624c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{annee_mariage_2}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="256" y="234" width="15" height="15" uuid="addca212-27a5-4ad6-b956-eb3383dcaf7e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{annee_mariage_3}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="271" y="234" width="15" height="15" uuid="ae0b783c-8b5a-4e96-9bde-84b5ab0cbed3">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{annee_mariage_4}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="254" y="355" width="15" height="15" uuid="1e90cfe0-ab11-41fe-97b1-c2f55ec5b4fd">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{jour_naissance_titulaire1_1}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="270" y="355" width="15" height="15" uuid="21bb9267-ae3c-4ccc-9cdb-107e3ad01bae">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{jour_naissance_titulaire1_2}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="288" y="355" width="15" height="15" uuid="84f83bba-d2e3-4f6d-8be2-01a1f49f4ad0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{mois_naissance_titulaire1_1}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="304" y="355" width="15" height="15" uuid="13a65cb0-8831-45bb-8b1d-40184b6c2086">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{mois_naissance_titulaire1_2}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="323" y="355" width="15" height="15" uuid="93c89f13-eeaa-4e38-9b20-5355fb273fa4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{annee_naissance_titulaire1_1}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="338" y="355" width="15" height="15" uuid="be88320f-9d9b-4e1b-9d40-8478a36314c2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{annee_naissance_titulaire1_2}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="353" y="355" width="15" height="15" uuid="88f60457-80f1-4d7c-afac-a8621b90f29d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{annee_naissance_titulaire1_3}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="369" y="355" width="15" height="15" uuid="df926ed8-cecb-4d87-8421-221ab88546e1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{annee_naissance_titulaire1_4}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="401" y="356" width="15" height="15" uuid="acd82b0a-563a-41e4-ad8a-322eecf53987">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{jour_naissance_titulaire2_1}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="417" y="356" width="15" height="15" uuid="cfb082b7-451d-4794-82f0-3393e66c10c0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{jour_naissance_titulaire2_2}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="436" y="356" width="15" height="15" uuid="a4898f89-29f3-4d3b-bc67-9083926e8842">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{mois_naissance_titulaire2_1}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="452" y="356" width="15" height="15" uuid="a5c0b129-18b5-4105-9743-2d4c4b42d31a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{mois_naissance_titulaire2_2}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="471" y="356" width="15" height="15" uuid="9e17a53f-80d5-4774-80ae-aad4605d997a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{annee_naissance_titulaire2_1}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="487" y="356" width="15" height="15" uuid="9549bfe9-04d0-4bcf-a096-d82801c55ae8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{annee_naissance_titulaire2_2}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="502" y="356" width="15" height="15" uuid="3f85aee6-7284-44c7-9ea7-fdb9145444c6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{annee_naissance_titulaire2_3}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="516" y="356" width="15" height="15" uuid="1cd8602c-2737-4941-88f5-2d285a64f581">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{annee_naissance_titulaire2_4}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="245" y="570" width="15" height="15" uuid="2dd3597e-fcd5-4f9b-b6c4-9d0e042689d6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{jour_delivrance_1}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="261" y="570" width="15" height="15" uuid="e186c90a-0efa-4ad2-b247-406a8d1f92d6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{jour_delivrance_2}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="280" y="570" width="15" height="15" uuid="99619250-9cd4-4234-896a-7af9a8665b47">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{mois_delivrance_1}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="296" y="570" width="15" height="15" uuid="d924449e-4b6b-4d0d-9be4-9b69473e6f52">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{mois_delivrance_2}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="315" y="570" width="15" height="15" uuid="6750c6b9-7ffe-42ab-ab20-20354e1ccc6b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{annee_delivrance_1}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="331" y="570" width="15" height="15" uuid="4d739e23-a7e2-43c2-b31c-85e40e16b65a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{annee_delivrance_2}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="346" y="570" width="15" height="15" uuid="ce09d436-71de-45e8-bfc9-5bf7ec025b6e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{annee_delivrance_3}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="361" y="570" width="15" height="15" uuid="2d7f96ca-1c68-4e23-9351-c80628cb6970">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{annee_delivrance_4}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="102" y="138" width="128" height="17" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="86da27bc-dd75-4510-a484-4b4755efa614">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Marianne" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{etat}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement x="264" y="138" width="293" height="22" uuid="debbe4a5-8493-468c-b4f9-97c60b365661">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{service_etat_civil}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="200" splitType="Immediate">
+			<property name="com.jaspersoft.studio.layout"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport>
+				<reportElement x="0" y="0" width="595" height="200" uuid="cb9bedd5-ac3b-40ac-b63f-6bb81ae8ad97"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{plurilingueSubreport}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

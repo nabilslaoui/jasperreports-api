@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true">
+
+    <property name="suffixRolling" value=".%d{yyyy-MM-dd}.%i.log.gz"/>
+
+    <!-- Seule la console dispose de coloration syntaxique   -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="fr.nabilslaoui.enterprise.commun.log.EscapeHtmlPatternLayout">
+            <!-- Date affichée en ISO8601 - heure locale à la JVM-->
+            <pattern>%d|%green([%thread])|%highlight(%level)|%X{tid:-NO_TID}|%X{user:-NO_USER}|%c|%m%n</pattern>
+        </layout>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}</file>
+        <append>true</append>
+        <layout class="fr.nabilslaoui.enterprise.commun.log.EscapeHtmlPatternLayout">
+            <pattern>%d|[%thread]|%level|%X{tid:-NO_TID}|%X{user:-NO_USER}|%c|%m%n</pattern>
+        </layout>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}${suffixRolling}</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>50MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="R_Courrier_CA_118" pageWidth="595" pageHeight="842" columnWidth="499" leftMargin="48" rightMargin="48" topMargin="48" bottomMargin="48" uuid="0232025a-165e-454d-a553-4053102e910a">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="src/main/resources/jasper/courriers/CERTIFICAT_INSCRIPTION_RCA/DataAdapter2.xml"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="mm"/>
+	<parameter name="headerSubReport" class="net.sf.jasperreports.engine.JasperReport">
+		<parameterDescription><![CDATA[header du rapport]]></parameterDescription>
+	</parameter>
+	<parameter name="footerSubReport" class="net.sf.jasperreports.engine.JasperReport">
+		<parameterDescription><![CDATA[footer du rapport]]></parameterDescription>
+	</parameter>
+	<parameter name="courrierSignatureSubReport" class="net.sf.jasperreports.engine.JasperReport">
+		<parameterDescription><![CDATA[signature du rapport]]></parameterDescription>
+	</parameter>
+	<queryString language="json">
+		<![CDATA[]]>
+	</queryString>
+	<field name="annee_inscription" class="java.lang.String"/>
+	<field name="numero_inscription" class="java.lang.String"/>
+	<field name="decision_recue" class="java.lang.String"/>
+	<field name="interesse_decision" class="java.lang.String"/>
+	<field name="decision_exequatur" class="java.lang.String"/>
+	<field name="paragraphe_fin" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="299">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport>
+				<reportElement stretchType="ContainerHeight" x="0" y="0" width="499" height="299" uuid="5f203b6a-50be-4f4b-88ab-87a226eb247a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{headerSubReport}]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="165" splitType="Prevent">
+			<textField>
+				<reportElement x="0" y="0" width="499" height="30" uuid="0a47a740-7b48-47bb-8db6-6e7131b55c16">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Marianne" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE("CERTIFICAT D'INSCRIPTION AU REPERTOIRE \nCIVIL ANNEXE N°",$F{annee_inscription}, " - ", $F{numero_inscription})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="99" width="499" height="44" uuid="df7e44e7-cd33-4b1c-ab1b-d6bfe4a39d2a"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<text><![CDATA[Aucun acte d'état civil, susceptible d'être mis à jour, n'est conservé sur un registre français. Pour la mise à jour de leurs actes d'état civil, les personnes de nationalité étrangère peuvent s'adresser aux autorités locales ou consulaires de leur pays. ]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="38" width="499" height="20" uuid="3d74884a-2dc3-4f52-b736-ab08e26c92fb"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{decision_recue}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="0" y="58" width="499" height="20" uuid="470d7cce-788a-4ce9-8ef9-948de1ba9c41"/>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{interesse_decision}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="0" y="78" width="499" height="20" uuid="2c706e69-14ca-4b56-90bc-9a6b5b9b3fba"/>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{decision_exequatur} == null ? "" : $F{decision_exequatur}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="0" y="143" width="499" height="20" uuid="321b0c12-a1fd-4d59-9c92-60e6171eb876"/>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paragraphe_fin}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="84" splitType="Prevent">
+			<subreport isUsingCache="false" runToBottom="false" overflowType="Stretch">
+				<reportElement positionType="Float" x="0" y="0" width="498" height="84" isRemoveLineWhenBlank="true" uuid="78fd5d2d-ea2e-4d72-b83d-b4e1bb6020ee">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{courrierSignatureSubReport}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="41" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="497" height="41" uuid="de999025-fb86-4a09-a556-9add07a1a340">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{footerSubReport}]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement x="236" y="5" width="26" height="30" uuid="092ac511-464d-488c-9228-eabcc1370c9f"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="252" y="5" width="13" height="30" uuid="e70b739a-e1bd-41e9-a4f2-55821987d572"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField evaluationTime="Report">
+				<reportElement x="265" y="5" width="26" height="30" uuid="f6d8372d-4864-4812-b72e-c21612006b55"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

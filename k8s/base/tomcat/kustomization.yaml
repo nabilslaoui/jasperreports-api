@@ -1,0 +1,6 @@
+commonLabels:
+  composant: tomcat
+
+resources:
+  - deploy.yaml
+  - service.yaml

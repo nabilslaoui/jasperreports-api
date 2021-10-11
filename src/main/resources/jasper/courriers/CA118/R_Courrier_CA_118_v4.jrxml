@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="R_Courrier_CA_118" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="20" bottomMargin="20" uuid="0232025a-165e-454d-a553-4053102e910a">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DA_JR_Courrier_CA_118_1_2.xml"/>
+	<parameter name="enteteCourrierSubReport" class="net.sf.jasperreports.engine.JasperReport">
+		<parameterDescription><![CDATA[sous rapport courrier entete]]></parameterDescription>
+	</parameter>
+	<parameter name="signatureCourrierSubReport" class="net.sf.jasperreports.engine.JasperReport">
+		<parameterDescription><![CDATA[sous rapport courrier signature]]></parameterDescription>
+	</parameter>
+	<parameter name="pieddepageCourrierSubReport" class="net.sf.jasperreports.engine.JasperReport">
+		<parameterDescription><![CDATA[sous rapport courrier pied de page]]></parameterDescription>
+	</parameter>
+	<parameter name="headerSubReport" class="net.sf.jasperreports.engine.JasperReport">
+		<parameterDescription><![CDATA[header du rapport]]></parameterDescription>
+	</parameter>
+	<parameter name="footerSubReport" class="net.sf.jasperreports.engine.JasperReport">
+		<parameterDescription><![CDATA[footer du rapport]]></parameterDescription>
+	</parameter>
+	<parameter name="courrierSignatureSubReport" class="net.sf.jasperreports.engine.JasperReport">
+		<parameterDescription><![CDATA[signature du rapport]]></parameterDescription>
+	</parameter>
+	<queryString language="json">
+		<![CDATA[]]>
+	</queryString>
+	<field name="formulaire" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="formulaire"/>
+		<fieldDescription><![CDATA[formulaire]]></fieldDescription>
+	</field>
+	<field name="canal_requete" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="canal_requete"/>
+		<fieldDescription><![CDATA[canal_requete]]></fieldDescription>
+	</field>
+	<field name="libelle_departement" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="libelle_departement"/>
+		<fieldDescription><![CDATA[libelle_departement]]></fieldDescription>
+	</field>
+	<field name="fonction_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="fonction_agent"/>
+		<fieldDescription><![CDATA[fonction_agent]]></fieldDescription>
+	</field>
+	<field name="bureau_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="bureau_agent"/>
+		<fieldDescription><![CDATA[bureau_agent]]></fieldDescription>
+	</field>
+	<field name="initiales_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="initiales_agent"/>
+		<fieldDescription><![CDATA[initiales_agent]]></fieldDescription>
+	</field>
+	<field name="prenom_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="prenom_agent"/>
+		<fieldDescription><![CDATA[prenom_agent]]></fieldDescription>
+	</field>
+	<field name="nom_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="nom_agent"/>
+		<fieldDescription><![CDATA[nom_agent]]></fieldDescription>
+	</field>
+	<field name="image_signature" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="image_signature"/>
+		<fieldDescription><![CDATA[image_signature]]></fieldDescription>
+	</field>
+	<field name="date_delivrance_demat" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="date_delivrance_demat"/>
+		<fieldDescription><![CDATA[date_delivrance_demat]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="380" splitType="Prevent">
+			<subreport>
+				<reportElement stretchType="ContainerHeight" x="0" y="0" width="515" height="370" uuid="5f203b6a-50be-4f4b-88ab-87a226eb247a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{headerSubReport}]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="170" splitType="Prevent">
+			<textField>
+				<reportElement x="0" y="15" width="520" height="15" uuid="4fec8760-e7fe-48ad-ad58-2c2cb596f804">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Objet : Demande d’acte"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="30" width="510" height="15" uuid="6e9502d1-a25a-4377-af74-72e82a655d96">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE("Référence : 118EC/",$F{canal_requete},"/",$F{bureau_agent},"/", $F{initiales_agent})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="70" width="520" height="100" uuid="e31208a2-99c6-4b75-9ce2-edb78cf46f2f">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Marianne" size="11"/>
+				</textElement>
+				<text><![CDATA[Madame, Monsieur,
+
+Le service central d’état civil vous adresse le document que vous avez demandé.
+Pour mémoire, les actes de l’état civil détenus dans un registre d’au moins 75 ans sont librement communicables en vertu de la loi du 15 juillet 2008, modifiée, relative aux archives.
+
+Je vous prie d’agréer, Madame, Monsieur, l’assurance de ma considération distinguée.
+]]></text>
+			</staticText>
+		</band>
+		<band height="130" splitType="Prevent">
+			<subreport>
+				<reportElement x="0" y="0" width="515" height="130" isRemoveLineWhenBlank="true" uuid="78fd5d2d-ea2e-4d72-b83d-b4e1bb6020ee">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{courrierSignatureSubReport}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="96" splitType="Stretch">
+			<subreport>
+				<reportElement x="2" y="1" width="515" height="80" uuid="de999025-fb86-4a09-a556-9add07a1a340">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{footerSubReport}]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement x="0" y="48" width="515" height="10" uuid="374943e3-f963-478c-abea-24a74ff6edd1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Marianne" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}.toString( ) + '/' + $V{PAGE_COUNT}.toString( )]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

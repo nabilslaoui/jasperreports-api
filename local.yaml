@@ -1,0 +1,16 @@
+SPRING_APPLICATION_JSON:  |
+  {
+    "jasperreports-api.server.url":"http://localhost",
+    "jasperreports-api.server.port":8090,
+    "jasperreports-api.logs.chemin":"/var/log/tomcat9",
+    "jasperreports-api.logs.nomFichier":"jasperreports-api.log",
+    "jasperreports-api.logging.level":"DEBUG",
+    "jasperreports-api.logging.level.org.springframework":"INFO",
+    "jasperreports-api.logging.level.CommonsRequestLoggingFilter":"INFO",
+    "api.m2m.credentials":"jasperreports-api:jasperreports-api",
+    "api.m2m.jwt.secret":"secret-composition-api",
+    "api.m2m.jwt.delai.expiration-ms":"86400000",
+    "api.supervision.credentials":"jasperreports-supervision:jasperreports-supervision",
+    "api.supervision.jwt.secret":"secret-supervision-composition-api",
+    "api.supervision.jwt.delai.expiration-ms":"86400000"
+  }

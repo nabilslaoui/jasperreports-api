@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SR_Courrier_signature" pageWidth="530" pageHeight="130" columnWidth="525" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="77569885-c4cd-4c96-8775-a451308626d2">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DA_JR_Courrier_CA_118_1_2.xml"/>
+	<queryString language="JSON">
+		<![CDATA[]]>
+	</queryString>
+	<field name="formulaire" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="formulaire"/>
+		<fieldDescription><![CDATA[formulaire]]></fieldDescription>
+	</field>
+	<field name="Image_bloc_marques" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Image_bloc_marques"/>
+		<fieldDescription><![CDATA[Image_bloc_marques]]></fieldDescription>
+	</field>
+	<field name="nom_direction" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="nom_direction"/>
+		<fieldDescription><![CDATA[nom_direction]]></fieldDescription>
+	</field>
+	<field name="adresse_internet" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="adresse_internet"/>
+		<fieldDescription><![CDATA[adresse_internet]]></fieldDescription>
+	</field>
+	<field name="service_delivreur" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="service_delivreur"/>
+		<fieldDescription><![CDATA[service_delivreur]]></fieldDescription>
+	</field>
+	<field name="adr_service_delivreur" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="adr_service_delivreur"/>
+		<fieldDescription><![CDATA[adr_service_delivreur]]></fieldDescription>
+	</field>
+	<field name="tel_service_delivreur" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="tel_service_delivreur"/>
+		<fieldDescription><![CDATA[tel_service_delivreur]]></fieldDescription>
+	</field>
+	<field name="ville_delivrance" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="ville_delivrance"/>
+		<fieldDescription><![CDATA[ville_delivrance]]></fieldDescription>
+	</field>
+	<field name="date_delivrance" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="date_delivrance"/>
+		<fieldDescription><![CDATA[date_delivrance]]></fieldDescription>
+	</field>
+	<field name="identite_requerant" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="identite_requerant"/>
+		<fieldDescription><![CDATA[identite_requerant]]></fieldDescription>
+	</field>
+	<field name="adresse_requerant" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="adresse_requerant"/>
+		<fieldDescription><![CDATA[adresse_requerant]]></fieldDescription>
+	</field>
+	<field name="canal_requete" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="canal_requete"/>
+		<fieldDescription><![CDATA[canal_requete]]></fieldDescription>
+	</field>
+	<field name="libelle_departement" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="libelle_departement"/>
+		<fieldDescription><![CDATA[libelle_departement]]></fieldDescription>
+	</field>
+	<field name="fonction_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="fonction_agent"/>
+		<fieldDescription><![CDATA[fonction_agent]]></fieldDescription>
+	</field>
+	<field name="bureau_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="bureau_agent"/>
+		<fieldDescription><![CDATA[bureau_agent]]></fieldDescription>
+	</field>
+	<field name="initiales_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="initiales_agent"/>
+		<fieldDescription><![CDATA[initiales_agent]]></fieldDescription>
+	</field>
+	<field name="prenom_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="prenom_agent"/>
+		<fieldDescription><![CDATA[prenom_agent]]></fieldDescription>
+	</field>
+	<field name="nom_agent" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="nom_agent"/>
+		<fieldDescription><![CDATA[nom_agent]]></fieldDescription>
+	</field>
+	<field name="image_signature" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="image_signature"/>
+		<fieldDescription><![CDATA[image_signature]]></fieldDescription>
+	</field>
+	<field name="date_delivrance_demat" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="date_delivrance_demat"/>
+		<fieldDescription><![CDATA[date_delivrance_demat]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="130" splitType="Stretch">
+			<image>
+				<reportElement x="330" y="50" width="140" height="70" forecolor="#FF3300" uuid="4bb2c7fa-ad30-4cb1-8048-86e48a09a98f"/>
+				<imageExpression><![CDATA[javax.imageio.ImageIO.read(new java.io.ByteArrayInputStream(Base64.getDecoder().decode($F{image_signature})))]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="270" y="20" width="240" height="21" uuid="10095ab8-7212-4280-843a-fd5b96331f8a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Marianne" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[CONCATENATE($F{prenom_agent} , " " , $F{nom_agent})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
