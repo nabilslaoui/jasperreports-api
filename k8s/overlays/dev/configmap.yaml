@@ -5,7 +5,7 @@ metadata:
 data:
   SPRING_APPLICATION_JSON:  |
       {
-        "jasperreports-api.server.url":"http://10.110.192.130",
+        "jasperreports-api.server.url":"http://13.74.19.184",
         "jasperreports-api.server.port":8090,
         "jasperreports-api.logs.chemin":"/var/log/tomcat9",
         "jasperreports-api.logs.nomFichier":"jasperreports-api.log",

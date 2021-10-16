@@ -13,7 +13,7 @@ spec:
   template:
     spec:
       containers:
-        - image: TODO/jasperreports-api:master
+        - image: registry.gitlab.com/dev1407/api/jasperreports-api/jasperreports-api:master
           name: jasperreports-api
           imagePullPolicy: Always
           env:
