@@ -12,11 +12,43 @@ spec:
     type: Recreate
   template:
     spec:
+      initContainers:
+        - name: copy-libs
+          image: registry.gitlab.com/d837/ci-tools/ci-tools:latest
+          command:
+            - wget
+            - "--no-check-certificate"
+            - "-P"
+            - "/libs"
+            - "https://repo1.maven.org/maven2/co/elastic/apm/elastic-apm-agent/1.26.0/elastic-apm-agent-1.26.0.jar"
+          securityContext:
+            runAsUser: 0
+            runAsGroup: 0
+          volumeMounts:
+            - mountPath: /libs
+              name: data
+              subPath: jasperreports-api
+        - name: executing-chmod
+          image: registry.gitlab.com/d837/ci-tools/ci-tools:latest
+          command: ['sh', '-c','chmod +x /libs/elastic-apm-agent-1.26.0.jar']
+          securityContext:
+            runAsUser: 0
+            runAsGroup: 0
+          volumeMounts:
+            - mountPath: /libs
+              name: data
+              subPath: jasperreports-api
       containers:
         - image: registry.gitlab.com/dev1407/api/jasperreports-api/jasperreports-api:master
           name: jasperreports-api
           imagePullPolicy: Always
           env:
+            - name: JAVA_OPTS
+              value: |
+                -javaagent:/libs/elastic-apm-agent-1.26.0.jar \
+                -Delastic.apm.service_name=jasperreports-api \
+                -Delastic.apm.application_packages=fr.nabilslaoui.enterprise.composition \
+                -Delastic.apm.server_url=http://apm-server:8200 \
             - name: SPRING_APPLICATION_JSON
               valueFrom:
                 configMapKeyRef:
@@ -27,3 +59,7 @@ spec:
       imagePullSecrets:
         - name: pull-docker
       restartPolicy: Always
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: shared-drive
