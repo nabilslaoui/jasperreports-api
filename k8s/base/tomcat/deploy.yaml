@@ -27,17 +27,6 @@ spec:
           volumeMounts:
             - mountPath: /libs
               name: data
-              subPath: jasperreports-api
-        - name: executing-chmod
-          image: registry.gitlab.com/d837/ci-tools/ci-tools:latest
-          command: ['sh', '-c','chmod +x /libs/elastic-apm-agent-1.26.0.jar']
-          securityContext:
-            runAsUser: 0
-            runAsGroup: 0
-          volumeMounts:
-            - mountPath: /libs
-              name: data
-              subPath: jasperreports-api
       containers:
         - image: registry.gitlab.com/dev1407/api/jasperreports-api/jasperreports-api:master
           name: jasperreports-api
