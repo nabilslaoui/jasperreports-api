@@ -45,6 +45,9 @@ spec:
                   name: jasperreports-api
           ports:
             - containerPort: 8080
+          volumeMounts:
+            - mountPath: /libs
+              name: data
       imagePullSecrets:
         - name: pull-docker
       restartPolicy: Always
